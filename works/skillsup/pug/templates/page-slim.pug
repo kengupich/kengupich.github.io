@@ -1,0 +1,24 @@
+include ../config/variables
+include ../components/mixins
+block pageVar
+
+doctype html
+html(lang="ru")
+    head
+        title= pageTitle
+        include head
+    body
+        include ../modules/header
+        block predcontent
+        .container-fluid
+            .row.p-0
+                .col-12.col-lg-8.col-xl-9.order-2.order-xl-1
+                    block content
+                .col-12.col-lg-4.col-xl-3.order-1.order-xl-2
+                    block sidebar
+            
+            block predfooter
+            
+            include ../components/navbuttons 
+        include ../modules/footer
+        include foot

@@ -1,0 +1,36 @@
+.course-page
+    &:hover
+        text-decoration: none !important
+    &-title
+        margin: 2rem 0 3rem
+    &-img
+        margin-bottom: 2.5rem
+        width: 100%
+    h3
+        margin-bottom: 1rem
+    p
+        margin-bottom: 3rem
+        a
+            color: $green-color
+    &-author
+        display: flex
+        align-items: center
+        margin: 2rem 0 1rem
+        img
+            width: 64px
+            height: 64px
+            object-fit: cover
+            border-radius: 220px
+            margin-right: 1rem
+        &-name 
+            @extend .font-subtitle1
+            color: $gray-color
+        &-desc
+            @extend .font-body1
+            color: $gray2-color
+            margin-bottom: 6rem
+    .recommend
+        margin: 96px 0 64px
+        h2
+            margin-bottom: 48px
+        

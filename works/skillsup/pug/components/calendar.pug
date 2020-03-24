@@ -1,0 +1,29 @@
+.container-fluid
+       
+        //- EPIC VARIABLE SETTING STARTS HERE!
+        - var timestamp = Date.now() + 60*60*24*40;
+        - var today = new Date(timestamp);
+        - var dayNum = today.getDate();
+        - var year = today.getFullYear();
+        - var months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Ноябрь', 'Декабрь'];
+        - var month = months[today.getMonth()];
+        - var monthStart = new Date(year, today.getMonth(), 0);
+        - var monthEnd = new Date(year, today.getMonth() + 1, 0);
+        - var daysName = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+        - var dayName = daysName[today.getDay()];
+        - var monthLength = ((monthEnd - monthStart) / 86400000) + 1;
+        - var index = 1;
+
+        .calendar-header
+            h1 #{dayName}
+            h2 #{month}, #{year}
+        #headings
+            ul
+                each val in daysName
+                    li= val
+        section
+            while index < monthLength
+                if index == dayNum
+                    div(class="today")= index++
+                else
+                    div= index++

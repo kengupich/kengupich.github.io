@@ -1,0 +1,349 @@
+#logo
+    height: 3rem
+header
+    z-index: 1040
+    margin: 0 -1.5rem
+    padding: 1.2rem 1.5rem 0
+    position: relative
+    &.front
+        min-height: 47vw
+        .header-bg
+            position: absolute
+            z-index: -1
+            top: 0
+            left: 0
+            right: -3rem
+            bottom: 0
+            overflow: hidden
+            width: 100%
+            display: block
+            img
+                position: absolute
+                z-index: -1
+                width: 100%
+                height: 100%
+                object-fit: cover
+        .header-text, .social-wrapper
+            display: block
+        .header-nav-wrapper
+            border: none
+        .active.nav-item:after
+            display: none
+    .header-bg
+        display: none
+    .header-nav-wrapper
+        border-bottom: 1px solid $gray3-color
+        padding-bottom: 2.5rem
+        margin-bottom: 1rem
+        transition: .3s
+        &.shrink
+            position: fixed
+            left: calc(1.5rem - 3px)
+            right: 0
+            top: 0
+            padding: 0 calc(2.5rem + 14px) 1rem
+            margin-bottom: .3rem
+            background: $white-color
+            padding-top: 1rem
+            z-index: 9999
+            .active.nav-item:after
+                bottom: calc(-1.5rem)
+    i
+        color: $gray-color
+        transition: .3s
+        &:hover, &:focus
+            color: $green-color
+        &active
+            color: $green3-color    
+    button
+        z-index: 10000
+        outline: none !important
+        .icon-bar
+            background-color: $gray-color
+            transition: .3s
+        &:hover
+            .icon-bar
+                background-color: $green-color
+        &active
+            .icon-bar
+                background-color: $green3-color 
+    .header-info
+        display: none
+        justify-content: flex-end
+        font-size: .9rem
+        line-height: 1.2rem
+        margin-bottom: 1.5rem
+        transition: all .3s ease
+        transition-delay: 2s
+        .header-contacts
+            display: none
+            margin-right: 3rem
+        a:not(:last-child)
+            margin-right: .8rem
+    .navbar
+        padding: .5rem 15px
+        position: relative
+        .nav-item
+            position: relative
+        .active.nav-item:after
+            content: ""
+            position: absolute
+            bottom: calc(-3rem - 1px)
+            width: 100%
+            background: $green-color
+            height: 2px
+        .dropdown-menu
+            @extend .font-body1
+            background: rgba(255, 255, 255, 0.85)
+            backdrop-filter: blur(50px)
+            border-radius: 0px 0px 4px 4px
+            box-shadow: 0px 8px 24px rgba(13, 64, 89, 0.08)
+            border: none 
+        .dropdown-item
+            color: $gray-color
+            &:hover
+                background: $green2-color
+                color: $gray-color
+            &:focus, &:active
+                background: none
+                color: $green-color
+    .header-menu
+        position: relative
+        justify-content: space-between
+        width: 100%
+    .nav-link
+        @extend .font-subtitle2
+        color: $gray-color
+        letter-spacing: 0.25px
+        
+        &.dropdown-toggle::after
+            display: none
+    .header-panel
+        display: flex
+        justify-content: flex-end
+        align-items: center
+    .header-panel-profile
+        display: none
+        margin-left: 2.5rem
+
+.slideIn
+    animation-name: slideIn
+
+.icon-bar 
+	width: 22px 
+	height: 2px
+	background-color: #B6B6B6
+	display: block
+	transition: all 0.2s
+	margin-top: 4px
+
+.header-text
+    display: none
+    margin-top: 4rem
+    p
+        width: 65%
+        color: $gray2-color
+
+.social-wrapper
+    display: none
+    position: absolute
+    bottom: 3.5rem
+.social
+    i
+        width: 32px
+ 
+.navbar-toggler 
+    border: none
+    background: transparent !important
+
+    .top-bar 
+        transform: rotate(45deg)
+        transform-origin: 10% 10%
+    .middle-bar 
+        opacity: 0
+    .bottom-bar 
+        transform: rotate(-45deg)
+        transform-origin: 10% 90%
+    &.collapsed 
+        .top-bar 
+            transform: rotate(0)
+        .middle-bar 
+            opacity: 1
+        .bottom-bar 
+            transform: rotate(0)
+
+
+
+@keyframes slideTop 
+    0% 
+        display: block
+        transform: translateY(-100%)
+        opacity: 0
+    100% 
+        transform: translateY(-50%)
+        opacity: 1
+
+@keyframes slideIn 
+    0% 
+        transform: translateY(1rem)
+        opacity: 0
+    100% 
+        transform: none
+        opacity: 1
+
+@keyframes collapse-in
+    0%
+        transform: translateX(-100%)
+        opacity: 0
+    100%
+        transform: none
+        opacity: 1
+        
+@keyframes collapse-out
+    0%
+        transform: translateX(0%)
+        opacity: 1
+    100%
+        transform: translateX(-100%)
+        opacity: 0
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@media (min-width: 992px)
+    .animate
+        animation-duration: .3s
+        animation-fill-mode: both
+
+@media (max-width: 992px)
+    .no-scroll
+        .header-info
+            display: block
+            position: absolute
+            width: 100%
+            height: 40px
+        .header-lang
+            position: fixed
+            top: 3rem
+            transform: translateY(-50%)
+            right: 6rem
+            z-index: 9999
+            opacity: 0
+        .header-panel-profile
+            position: fixed
+            top: 3rem
+            right: 1.5rem
+            transform: translateY(-50%)
+            display: block
+            opacity: 0
+            z-index: 9999
+        .header-lang, .header-panel-profile
+            animation: slideTop .5s ease .8s forwards
+        header
+            height: 100vh
+    header
+        position: sticky
+        &.front
+            min-height: 76vw
+        .collapsing
+            transition: none
+            display: none
+        .nav-link, .dropdown-item
+            padding: .8rem 1rem
+        .header-nav-wrapper
+            &.shrink
+                padding-top: 0
+                padding-bottom: 0
+                height: 40px
+                display: flex
+                align-items: center
+                #logo
+                    height: 2rem
+                .search-icon
+                    width: 24px
+                    height: 24px
+    .header-nav
+        position: absolute
+        overflow: auto
+        //background: rgba(255, 255, 255, 0.85)
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        height: 100vh
+        width: 100vw
+        z-index: 999
+        display: block !important
+        padding: 5rem 1rem 2rem
+        margin-top: -1.2rem
+        animation: collapse-out .5s ease forwards
+        backdrop-filter: blur(50px)
+        background: rgba(255, 255, 255, 0.85)
+        .dropdown-menu.show
+            position: fixed
+            width: 57vw
+            left: 43vw
+            display: block
+            box-shadow: none
+            backdrop-filter: none
+            background: transparent
+            top: 10rem
+            padding-top: 0
+            animation: slideIn .5s ease forwards
+            .dropdown-item
+                white-space: initial
+        &.show
+            animation: fadeIn 1s ease forwards
+            .navbar-nav
+                background: rgba(255, 255, 255, 0.85)
+                //backdrop-filter: blur(50px)
+                width: 43vw
+                margin: -5rem -1rem -2rem
+                padding: 10rem 0rem 2rem 1rem
+                animation: slideIn 1.5s ease forwards
+                .nav-item
+                    transition: .3s
+                    &::after
+                        content: ""
+                        position: absolute
+                        height: 100%
+                        width: 2px
+                        top: 0
+                        right: 0
+                        bottom: 0
+                        transition: .3s
+                    &:hover::after
+                        background: $green-color
+                    &:active::after
+                        background: $gray2-color
+                    &.active::after
+                        background: $green-color
+
+@media (max-width: 576px)
+    header
+        &.front
+            .header-bg
+                img
+                    opacity: .8
+                    left: 20vw
+    .social-wrapper
+        position: relative
+        bottom: 0
+    
+@media (max-width: 400px)
+    header
+        &.front
+            min-height: 110vw
+            .header-bg
+                img
+                    opacity: .8
+                    left: 45vw
+    .header-text
+        p
+            width: 90%
+    .social
+        img
+            width: 16px

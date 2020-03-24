@@ -1,0 +1,49 @@
+.accordion
+    display: flex
+    align-items: start
+    &-wrapper
+        margin: 3rem 0 3rem
+    &-id
+        @extend .font-body1
+        color: $green-color
+        border-radius: 2rem
+        border: 1px solid $green-color
+        width: 2rem
+        height: 2rem
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 1rem
+    &-info
+        width: 100%
+    &-link
+        @extend .font-body1
+        background: none
+        border: none
+        color: $gray-color
+        line-height: 32px
+        padding: 0
+        color: $gray-color
+        width: 100%
+        text-align: left
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .iconify
+            display: none
+            width: 24px
+            height: 24px
+            path
+                color: $gray2-color
+        &:focus
+            outline: none
+        &[aria-expanded="true"]
+            svg[data-icon="entypo:chevron-up"]
+                display: inline
+        &[aria-expanded="false"]
+            svg[data-icon="entypo:chevron-down"]
+                display: inline
+    &-text
+        @extend .font-body1
+        color: $gray2-color
+        

@@ -1,0 +1,36 @@
+extends templates/page-slim
+
+block pageVar
+    - var pageTitle = "SkillsUp / Календарь";
+    - var pageName = "Календарь";
+
+block content
+    .page-title Календарь
+    #todayEvents
+        .calendar-section
+            .row
+                +courseCardSidebar("img/courses/img_Agile with Scrum.svg", "10 недель | 20 занятий", "Тестирование ПО и обеспечение качества", "27-02-2020", "new")
+                +courseCardSidebar("img/courses/img_Agile with Scrum.svg", "10 недель | 20 занятий", "Тестирование ПО и обеспечение качества", "04-02-2020")
+                +courseCardSidebar("img/courses/img_Agile with Scrum.svg", "10 недель | 20 занятий", "Тестирование ПО и обеспечение качества", "04-02-2020")
+                +courseCardSidebar("img/courses/img_Agile with Scrum.svg", "10 недель | 20 занятий", "Тестирование ПО и обеспечение качества", "04-02-2020")
+                +courseCardSidebar("img/courses/img_Agile with Scrum.svg", "10 недель | 20 занятий", "Тестирование ПО и обеспечение качества", "27-02-2020")
+        .calendar-section
+            h2.mt-5.mb-4 Мероприятия
+            .row
+                +workshopCardSidebar("img/workshops/img_mk.jpg", "Вт, 16 апр | Днепр", "Роман Гобозов", "Тестирование ПО и обеспечение качества", "04-02-2020")
+                +workshopCardSidebar("img/workshops/img_mk.jpg", "Вт, 16 апр | Днепр", "Роман Гобозов",  "Тестирование ПО и обеспечение качества", "28-02-2020")
+                +workshopCardSidebar("img/workshops/img_mk.jpg", "Вт, 16 апр | Днепр", "Роман Гобозов",  "Тестирование ПО и обеспечение качества", "07-03-2020")
+        .row.px-3.filter-empty
+            .card-form
+                h3 На ближайшее время курсы и мероприятия еще не запланированы
+                .card-form-desc Заходите позже или подпишитесь на нашу рассылку, чтобы быть в курсе обновлений :)
+                form(method="get" action="")
+                    .card-form-field
+                        input.card-form-email(placeholder="Введите ваш email" type="email" required data-error="#errNm1")
+                        .errorTxt
+                            span(id="errNm1")
+                        .successTxt
+                        button.button.btn-full.btn-square(type="submit" ) Подписаться
+block sidebar
+    #calendar
+    

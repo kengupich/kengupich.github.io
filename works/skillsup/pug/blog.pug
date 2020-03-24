@@ -1,0 +1,40 @@
+extends templates/base
+
+block pageVar
+    - var pageTitle = "SkillsUp / Блог";
+    - var pageName = "Блог";
+
+block content
+    .page-title Блог
+    #filter-controls.chip
+        a.chip-item.chip-item-active(data-tag="all" href="#") Все
+        a.chip-item(data-tag="success" href="#") Истории успеха
+        a.chip-item(data-tag="develop" href="#") Разработка
+        a.chip-item(data-tag="testing" href="#") Тестирование
+        a.chip-item(data-tag="web" href="#") WEB
+        a.chip-item(data-tag="management" href="#") Менеджмент
+        a.chip-item(data-tag="analitycs" href="#") Аналитика
+        a.chip-item(data-tag="design" href="#") Дизайн
+        a.chip-item(data-tag="other" href="#") Другое
+    
+    #myList.card-mega.container-fluid.p-0
+        +blogCardMega("success", "img/img_post2.jpg", "История знакомства с магией Java-разработки от нашего выпускника Дениса Березанского", "Привет, меня зовут Денис, мне 25 и я  ̶а̶л̶к̶о̶г̶о̶л̶и̶к̶  Java-разработчик в компании Asseco Data Systems в Варшаве, которая находится в ТОП-10 самых успешных и крупных компаний Европы...", "img/trainers/photo_trainer01.jpg", "Денис Березанский", "18 апреля 2019")
+        .row.graya.mt-6r
+            +blogCard("develop", "img/img_post2.jpg", "История знакомства с магией Java-разработки от нашего выпускника Дениса Березанского", "Привет, меня зовут Денис, мне 25 и я  ̶а̶л̶к̶о̶г̶о̶л̶и̶к̶  Java-разработчик в компании Asseco Data Systems в Варшаве, которая находится в ТОП-10 самых успешных и крупных компаний Европы...", "img/trainers/photo_trainer01.jpg", "Денис Березанский", "18 апреля 2019")
+            +blogCard("develop", "img/img_post2.jpg", "История знакомства с магией Java-разработки от нашего выпускника Дениса Березанского", "Привет, меня зовут Денис, мне 25 и я  ̶а̶л̶к̶о̶г̶о̶л̶и̶к̶  Java-разработчик в компании Asseco Data Systems в Варшаве, которая находится в ТОП-10 самых успешных и крупных компаний Европы...", "img/trainers/photo_trainer01.jpg", "Денис Березанский", "18 апреля 2019")
+            +blogCard("develop", "img/img_post2.jpg", "История знакомства с магией Java-разработки от нашего выпускника Дениса Березанского", "Привет, меня зовут Денис, мне 25 и я  ̶а̶л̶к̶о̶г̶о̶л̶и̶к̶  Java-разработчик в компании Asseco Data Systems в Варшаве, которая находится в ТОП-10 самых успешных и крупных компаний Европы...", "img/trainers/photo_trainer01.jpg", "Денис Березанский", "18 апреля 2019")
+            +blogCard("develop", "img/img_post2.jpg", "История знакомства с магией Java-разработки от нашего выпускника Дениса Березанского", "Привет, меня зовут Денис, мне 25 и я  ̶а̶л̶к̶о̶г̶о̶л̶и̶к̶  Java-разработчик в компании Asseco Data Systems в Варшаве, которая находится в ТОП-10 самых успешных и крупных компаний Европы...", "img/trainers/photo_trainer01.jpg", "Денис Березанский", "18 апреля 2019")
+            +blogCard("develop", "img/img_post2.jpg", "История знакомства с магией Java-разработки от нашего выпускника Дениса Березанского", "Привет, меня зовут Денис, мне 25 и я  ̶а̶л̶к̶о̶г̶о̶л̶и̶к̶  Java-разработчик в компании Asseco Data Systems в Варшаве, которая находится в ТОП-10 самых успешных и крупных компаний Европы...", "img/trainers/photo_trainer01.jpg", "Денис Березанский", "18 апреля 2019")
+        .row.px-3.filter-empty
+            .card-form
+                h3 В данной рубрике записей еще нет
+                .card-form-desc Заходите позже или подпишитесь на нашу рассылку, чтобы быть в курсе обновлений :)
+                form(method="get" action="")
+                    .card-form-field
+                        input.card-form-email(placeholder="Введите ваш email" type="email" required data-error="#errNm1")
+                        .errorTxt
+                            span(id="errNm1")
+                        .successTxt
+                        button.button.btn-full.btn-square(type="submit" ) Подписаться
+                        
+    .pagination

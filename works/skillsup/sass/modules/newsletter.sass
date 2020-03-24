@@ -1,0 +1,64 @@
+.newsletter
+    width: 45%
+    min-width: 280px
+    margin: 7rem auto
+    text-align: center
+    h2
+        margin-bottom: 2rem
+    &-form
+        postition: relative
+        display: flex
+        align-items: start
+        justify-content: center
+    &-field
+        padding-right: 1rem
+        width: 40%
+    &-email
+        @extend .font-body1
+        background: $white-color
+        opacity: 0.75
+        border: 1px solid $gray3-color
+        box-sizing: border-box
+        border-radius: 4px
+        padding: 1rem
+        margin-bottom: .5rem
+        width: 100%
+        height: 3rem
+        &:focus, &:active
+            border-color: darken($gray3-color, 20%)
+            outline: none
+    .errorTxt, .successTxt
+        padding: 0 1rem
+        text-align: left
+        span
+            @extend .font-caption
+        .error
+            color: $warning-color
+    .successTxt
+        @extend .font-caption
+        color: $sucess-color
+
+@media (max-width: 1440px)
+    .newsletter
+        width: 60%
+@media (max-width: 1440px)
+    .newsletter-field
+        width: 55%
+@media (max-width: 768px)
+    .newsletter
+        width: 85%
+@media (max-width: 500px)
+    .newsletter
+        width: 100%
+        .button
+            width: 100%
+            border-radius: 0
+            height: 4rem
+    .newsletter-form
+        flex-direction: column
+    .newsletter-email
+        border-radius: 0
+        height: 4rem
+    .newsletter-field
+        width: 100%
+        padding: 0

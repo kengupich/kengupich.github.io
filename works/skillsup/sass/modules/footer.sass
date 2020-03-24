@@ -1,0 +1,77 @@
+footer
+    font-size: 1rem
+    line-height: 1.5rem
+    .footer-info
+        margin: 2rem -15px
+    span
+        font-size: 1.1rem
+        letter-spacing: 0.25px
+        display: inline-block
+        color: $gray-color
+    ul
+        list-style: none
+        column-count: 2
+        column-gap: 10%
+        padding: 0
+        width: 100%
+    a
+        display: block
+        margin: 2px 0
+        font-size: 1rem
+        line-height: 1.5rem
+    .indent
+        margin-bottom: 2rem
+    .footer-title
+        margin-bottom: 2rem
+    .contact
+        &:not(:last-child)
+            margin-bottom: 2rem
+    .footer-nav
+        display: none
+        flex-grow: .5
+    .footer-contacts
+        flex-grow: 1
+        display: flex
+        justify-content: center
+    .contact-wrapper
+        display: flex
+        flex-direction: column
+        width: 100%
+    .contact-block
+        flex-grow: 1
+        margin-bottom: 2rem
+        span
+            font-size: 1rem
+    .footer-address
+        flex-grow: .5
+        li
+            margin-bottom: 2rem
+        a
+            &:nth-child(even)
+                color: $gray-color
+                &:hover
+                    color: $green-color
+            &:not(:last-child)
+                margin-bottom: 2rem
+    .footer-links
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    .footer-copyright
+        padding-bottom: 1rem
+        span 
+            font-size: .9rem
+            line-height: 1.25rem 
+            color: $gray-color
+        img
+            width: 1.5rem
+            height: 1.5rem
+@media (max-width: 992px)
+    footer
+        .footer-contacts
+            justify-content: flex-start
+            & > span
+                display: block
+                width: 100%
+        .contact-wrapper
+            flex-direction: row

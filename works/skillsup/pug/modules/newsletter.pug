@@ -1,0 +1,10 @@
+.newsletter
+    h2 Хотите узнавать о наших акциях, скидках и мероприятиях?
+    form(class="newsletter-form" method="get" action="")
+        .newsletter-field
+            input.newsletter-email(placeholder="Введите ваш email" type="email" required data-error="#errNm1")
+            .errorTxt
+                span(id="errNm1")
+            .successTxt
+        button.button.btn-full(type="submit" ) Подписаться
+            

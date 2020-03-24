@@ -1,0 +1,40 @@
+#exampleModalCenter.modal.fade.form(tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role="document")
+        form#modal.modal-content(method="get" action="#")
+            .modal-header
+                h3.mb-3#exampleModalCenterTitle.modal-title Записаться на курс
+                h3.mb-3.mt-4#exampleModalCenterTitle.modal-title-hide.text-center.w-100 Спасибо, ваш запрос принят
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span(class="iconify form-close" data-icon="ion:close" data-inline="false")
+                .modal-desc.font-body1.gray2.mb-3
+                .modal-desc-hide.font-body1.gray2.mb-3.text-center.w-100.mb-4 Мы свяжемся с вами в ближайшее время
+            .modal-body
+                .form-field
+                    
+                    input.form-input(type="text" name="name" id="name" required data-error="#errNm1")
+                    label(for="name") Полное имя
+                    .errorTxt
+                        #errNm1.form-hint.font-caption.gray2.mt-2 Имя Фамилия
+                    .successTxt
+                .form-field
+                    input.form-input(type="email" name="email" placeholder="Эл. почта" required)
+                .form-field
+                    input.form-input(type="tel" name="phone" placeholder="+380 _ _  _ _ _ - _ _ - _ _")
+                .form-field.d-flex.mb-0.mt-5
+                    div.d-flex.flex-column.w-50
+                        input(type="radio" id="city_dnepr" name="city" value="dnepr")
+                        label(for="city_dnepr") Днепр
+                        input(type="radio" id="city_dnepr2" name="city" value="kiev")
+                        label(for="city_dnepr2") Киев
+                        input(type="radio" id="city_dnepr3" name="city" value="odessa")
+                        label(for="city_dnepr4") Одесса
+                    div.d-flex.flex-column.w-50
+                        input(type="radio" id="direction_online" name="direction" value="online")
+                        label(for="direction_online") Онлайн
+                        input(type="radio" id="direction_offline" name="direction" value="offline")
+                        label(for="direction_offline") Оффлайн
+                label.button.btn-file(for="file") Прикрепить файл
+                    input(id="file" name="file" type="file" accept=".pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document") 
+                .font-caption.gray2 Допустимые форматы #[br] DOCS, PDF
+            .modal-footer
+                button.button.btn-full.w-100(type="submit") Записаться

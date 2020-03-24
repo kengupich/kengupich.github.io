@@ -1,0 +1,43 @@
+extends templates/base
+
+block pageVar
+    - var pageTitle = "SkillsUp / Курсы";
+    - var pageName = "Курсы";
+
+block content
+    .page-title Мастер-классы
+    #filter-controls.chip
+        a.chip-item.chip-item-active(data-tag="all" href="#") Все
+        a.chip-item(data-tag="develop" href="#") Разработка
+        a.chip-item(data-tag="testing" href="#") Тестирование
+        a.chip-item(data-tag="web" href="#") WEB
+        a.chip-item(data-tag="management" href="#") Менеджмент
+        a.chip-item(data-tag="analitycs" href="#") Аналитика
+        a.chip-item(data-tag="design" href="#") Дизайн
+        a.chip-item(data-tag="other" href="#") Другое
+    
+    #myList.card-mega.container-fluid.p-0
+        +workshopCardMega("img/workshops/img_highlight.jpg", "Вторник 16 апр | Днепр", "Роман Гобозов", "Ассертивность. Уверенность в жизни и в конфликте", "Минимальная и достаточная теория, Визуализация, Ролевая игра, Работа с эмоциями и ощущениями, Живой и практический опыт...", "develop")
+        .row.px-3.filter-empty
+            .card-form
+                h3 На ближайшее время мастер-классы еще не запланированы
+                .card-form-desc Заходите позже или подпишитесь на нашу рассылку, чтобы быть в курсе обновлений :)
+                form(method="get" action="")
+                    .card-form-field
+                        input.card-form-email(placeholder="Введите ваш email" type="email" required data-error="#errNm1")
+                        .errorTxt
+                            span(id="errNm1")
+                        .successTxt
+                        button.button.btn-full.btn-square(type="submit" ) Подписаться
+                        
+
+    .container-fluid.p-0
+        h2.my-5 Скоро
+        .row
+            +workshopCard("img/workshops/img_mk.jpg", "Вт, 16 апр | Днепр", "Роман Гобозов", "Тестирование ПО и обеспечение качества", "develop")
+            +workshopCard("img/workshops/img_mk.jpg", "Вт, 16 апр | Днепр", "Роман Гобозов",  "Тестирование ПО и обеспечение качества", "develop")
+            +workshopCard("img/workshops/img_mk.jpg", "Вт, 16 апр | Днепр", "Роман Гобозов",  "Тестирование ПО и обеспечение качества", "other")
+    .container-fluid.p-0
+        h2.my-5 Прошедшие мастер-классы
+        .row
+            +workshopCard("img/workshops/img_mk.jpg", "Вт, 16 апр | Днепр", "Роман Гобозов", "Тестирование ПО и обеспечение качества")        

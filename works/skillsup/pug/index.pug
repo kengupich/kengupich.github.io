@@ -1,0 +1,55 @@
+extends templates/base
+
+block pageVar
+    - var pageTitle = "SkillsUp / Главная";
+    - var pageName = "Главная";
+
+block content
+
+    .latest-news-wrapper
+        a.latest-news-item
+            .latest-news-date.font-body2 18 апреля 2019
+            h5.latest-news-text 4 июня в Киеве пройдёт AI Conference
+        a.latest-news-item
+            .latest-news-date.font-body2 18 апреля 2019
+            h5.latest-news-text 4 июня в Киеве пройдёт AI Conference
+        a.latest-news-item
+            .latest-news-date.font-body2 18 апреля 2019
+            h5.latest-news-text 4 июня в Киеве пройдёт AI Conference
+        a.latest-news-item
+            .latest-news-date.font-body2 18 апреля 2019
+            h5.latest-news-text 4 июня в Киеве пройдёт AI Conference
+        a.latest-news-item
+            .latest-news-date.font-body2 18 апреля 2019
+            h5.latest-news-text 4 июня в Киеве пройдёт AI Conference
+        a.latest-news-item
+            .latest-news-date.font-body2 18 апреля 2019
+            h5.latest-news-text 4 июня в Киеве пройдёт AI Conference
+        a.latest-news-item
+            .latest-news-date.font-body2 18 апреля 2019
+            h5.latest-news-text 4 июня в Киеве пройдёт AI Conference
+
+    h2 Скоро
+    .courses-wrapper
+        +courseCardSlide("img/courses/img_Agile with Scrum.svg", "Вт, 16 апр | Днепр", "Роман Гобозов", "Тестирование ПО и обеспечение качества", "New")
+        +courseCardSlide("img/courses/img_Agile with Scrum.svg", "Вт, 16 апр | Днепр", "Роман Гобозов",  "Тестирование ПО и обеспечение качества")
+        +courseCardSlide("img/courses/img_Agile with Scrum.svg", "Вт, 16 апр | Днепр", "Роман Гобозов",  "Тестирование ПО и обеспечение качества", "NEW")
+        +courseCardSlide("img/courses/img_Agile with Scrum.svg", "Вт, 16 апр | Днепр", "Роман Гобозов",  "Тестирование ПО и обеспечение качества")
+        +courseCardSlide("img/courses/img_Agile with Scrum.svg", "Вт, 16 апр | Днепр", "Роман Гобозов",  "Тестирование ПО и обеспечение качества")
+    .courses-nav
+        .courses-link
+            a.font-btn(href="calendar.html") Перейти в календарь
+        .courses-arrows
+    
+
+    .start-section
+        h2 Старт вашей успешной IT-карьеры
+        .font-body Мы даем реальные знания и навыки, обладая которыми можно начать работать сразу после окончания серии курсов. При этом не важно, с каким уровнем подготовки вы пришли к обучению, у нас каждый может пройти путь от новичка до профессионала
+    
+    .deal-section
+        +dealItem("img/deal/bn_Praxis.png", "Стажировки", "Направленны на обмен опытом для развитие специалистов в IT")
+        +dealItem("img/deal/bn_Praxis.png", "Стажировки", "Направленны на обмен опытом для развитие специалистов в IT", 1)
+        +dealItem("img/deal/bn_Praxis.png", "Стажировки", "Направленны на обмен опытом для развитие специалистов в IT")
+        +dealItem("img/deal/bn_Praxis.png", "Стажировки", "Направленны на обмен опытом для развитие специалистов в IT", 1)
+    
+    include modules/newsletter

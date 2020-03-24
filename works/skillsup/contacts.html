@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>SkillsUp / Контакты</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,600,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" type="text/css">
+    <link href="./libs/mini-event-calendar/mini-event-calendar.css" rel="stylesheet">
+    <link href="./css/main.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header-bg"><img src="img/main-header-bg.png"></div>
+      <nav class="navbar navbar-expand-lg navbar-offcanvas flex-column">
+        <div class="row justify-content-end w-100">
+          <div class="header-info d-lg-flex">
+            <div class="header-contacts d-lg-block"><a class="font-body2" href="tel:+380 67 536-87-70">+380 67 536-87-70</a><a class="font-body2" href="tel:+380 95 492-65-67">+380 95 492-65-67</a><a class="font-body2" href="tel:+380 93 151-51-52">+380 93 151-51-52</a>
+            </div>
+            <div class="header-lang"><a class="font-body2 active" href="#">UA</a><a class="font-body2" href="#">RU</a><a class="font-body2" href="#">EN</a></div>
+          </div>
+        </div>
+        <div class="row w-100 justify-content-between header-nav-wrapper">
+          <button class="navbar-toggler collapsed p-0" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-label="Toggle navigation" aria-expanded="false"><span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span><span class="icon-bar bottom-bar"></span></button><a class="navbar-brand" href="index.html"> <img id="logo" src="img/logo_small.png"></a>
+          <div class="header-panel order-lg-3">
+            <div class="header-panel-search"><a class="header-panel-search-link"><span class="iconify search-icon" data-icon="bx:bx-search-alt-2" data-inline="false"></span></a>
+              <div class="search-overlay"><span class="iconify search-close" data-icon="ion:close" data-inline="false"></span>
+                <form method="get">
+                  <div class="search-overlay-field">
+                    <input class="search-overlay-input" placeholder="Начните писать для поиска"><a href="search-page.html"><span class="iconify search-overlay-icon" data-icon="bx:bx-search-alt-2" data-inline="false"></span></a>
+                  </div>
+                  <div class="search-overlay-results">
+                    <ul><a href="search-page.html?search=12345">
+                        <li>123 <span class="marked">45</span></li></a><a href="search-page.html?search=12345">
+                        <li>123 <span class="marked">45</span></li></a><a href="search-page.html?search=12345">
+                        <li>123 <span class="marked">45</span></li></a><a href="search-page.html?search=12345">
+                        <li>123 <span class="marked">45</span></li></a></ul>
+                    <div class="search-overlay-results-nofound">
+                      <h3>Ничего не найдено</h3>
+                      <div class="font-body1">Попробуйте использовать другие ключевые слова</div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="header-panel-profile d-lg-block"><img src="img/icons/Profile avatar icon.png"></div>
+          </div>
+          <div class="collapse header-nav navbar-collapse order-lg-2 col-lg-8 px-xl-5" id="collapsibleNavbar">    
+            <ul class="navbar-nav header-menu">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="learning" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Обучение</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="learning"><a class="dropdown-item" href="courses.html">Курсы</a><a class="dropdown-item" href="workshops.html">Мастер-классы</a></div>
+              </li>
+              <li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" href="#" id="career" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Карьера</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="career"><a class="dropdown-item" href="jobs.html">Вакансии</a><a class="dropdown-item" href="interships.html">Стажировки</a><a class="dropdown-item" href="career.html">Построение карьеры</a><a class="dropdown-item" href="career.html">Создание резюме</a><a class="dropdown-item" href="career.html">Подготовка к собеседованию</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="business" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Бизнесу</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="business"><a class="dropdown-item" href="trainings.html">Тренинги</a><a class="dropdown-item" href="jobs.html">Консалтинг</a><a class="dropdown-item" href="jobs.html">Аудит процессов</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="calendar.html">Календарь</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Блог</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О нас</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="about"><a class="dropdown-item" href="jobs.html">Компания</a><a class="dropdown-item" href="ourteam.html">Наша команда</a><a class="dropdown-item" href="bonuses.html">Программа лояльности</a><a class="dropdown-item" href="workshops.html">Встречи</a><a class="dropdown-item" href="certificates.html">Найти сертификат</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="header-text col-12 col-sm-6 col-lg-5 col-xl-4">
+        <h1 class="font-title">Карьера в IT</h1>
+        <p class="font-body1">Делимся опытом полученным на реальных проектах</p>
+      </div>
+      <div class="social-wrapper">
+        <div class="social col-auto"><a href="#"><span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false"></span></a><a href="#"><span class="iconify" data-icon="fa-brands:instagram" data-inline="false"></span></a><a href="#"><span class="iconify" data-icon="fa-brands:linkedin-in" data-inline="false"></span></a></div>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <div class="font-title mb-5">Контакты</div>
+      <div class="row">
+        <div class="col-12 col-xl-4">
+          <h3 class="mb-4">Звоните</h3>
+          <div class="contacts-phones"><a class="font-body1 gray2" href="tel:+380 67 536-87-70">+38 (067) 536-87-70   Днепр</a><a class="font-body1 gray2" href="tel:+38 (095) 492-65-67">+38 (095) 492-65-67   Днепр, Киев</a><a class="font-body1 gray2" href="tel:+38 (093) 151-51-52">+38 (093) 151-51-52   Днепр, Киев</a></div>
+        </div>
+        <div class="col-12 col-xl-4">
+          <h3 class="mb-4">Пишите</h3>
+          <div class="contacts-social"><a href="#">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#00AFF0"/>
+                <path d="M25.2921 17.6655C25.2858 17.7007 25.2813 17.7362 25.2747 17.7713L25.2405 17.5699C25.2592 17.6012 25.2747 17.6339 25.2921 17.6655C25.3954 17.1037 25.4495 16.5285 25.4495 15.9536C25.4495 14.6788 25.1999 13.4419 24.7068 12.2776C24.2311 11.1529 23.5504 10.1429 22.6826 9.27564C21.816 8.40843 20.8053 7.72778 19.6812 7.25205C18.5172 6.75953 17.2804 6.50994 16.0055 6.50994C15.4047 6.50994 14.8029 6.56632 14.2173 6.67876C14.216 6.67908 14.2144 6.67908 14.2128 6.6794C14.2458 6.69682 14.279 6.71234 14.3113 6.73039L14.1128 6.69935C14.146 6.69301 14.1796 6.68605 14.2128 6.6794C13.4093 6.25212 12.5057 6.02408 11.5909 6.02408C10.0976 6.02408 8.69348 6.6056 7.6375 7.6619C6.58184 8.71788 6 10.1219 6 11.6153C6 12.5658 6.24452 13.5002 6.70346 14.3259C6.70948 14.2917 6.7136 14.2572 6.72025 14.223L6.75445 14.4209C6.73672 14.3899 6.7212 14.3576 6.70346 14.3259C6.61034 14.8609 6.56125 15.4076 6.56125 15.9536C6.56125 17.2288 6.81083 18.4653 7.30398 19.6299C7.77908 20.7549 8.46005 21.7644 9.32695 22.6316C10.1948 23.4988 11.2042 24.1804 12.3296 24.6548C13.4935 25.1483 14.7307 25.3982 16.0055 25.3982C16.5605 25.3982 17.1166 25.3475 17.6595 25.2513C17.6278 25.2335 17.5955 25.2174 17.5632 25.1987L17.765 25.2341C17.7301 25.2408 17.695 25.2449 17.6595 25.2513C18.496 25.7245 19.443 25.9759 20.41 25.9759C21.9031 25.9759 23.3065 25.3954 24.3625 24.3388C25.4188 23.2834 26 21.879 26 20.3856C26 19.4319 25.7542 18.4944 25.2921 17.6655ZM16.0432 21.7374C12.6881 21.7374 11.1871 20.0879 11.1871 18.8517C11.1871 18.2176 11.6552 17.7732 12.3004 17.7732C13.7362 17.7732 13.3643 19.8348 16.0432 19.8348C17.4147 19.8348 18.172 19.0902 18.172 18.3281C18.172 17.8698 17.9458 17.3618 17.0428 17.1391L14.0586 16.3942C11.6552 15.7914 11.2191 14.4922 11.2191 13.2709C11.2191 10.7351 13.6066 9.78305 15.8488 9.78305C17.9142 9.78305 20.3489 10.9245 20.3489 12.4458C20.3489 13.0976 19.7845 13.4768 19.1396 13.4768C17.9142 13.4768 18.1397 11.7807 15.6714 11.7807C14.4466 11.7807 13.7682 12.3353 13.7682 13.129C13.7682 13.9211 14.7355 14.1742 15.5754 14.3655L17.7843 14.8558C20.2038 15.3949 20.8173 16.8075 20.8173 18.1381C20.8173 20.1988 19.2356 21.7374 16.0432 21.7374ZM17.5632 25.1987C17.5955 25.2174 17.6278 25.2335 17.6595 25.2513C17.695 25.2449 17.7301 25.2408 17.765 25.2341L17.5632 25.1987ZM25.2747 17.7713C25.2813 17.7362 25.2858 17.7007 25.2921 17.6655C25.2747 17.6339 25.2592 17.6012 25.2405 17.5699L25.2747 17.7713ZM6.72025 14.223C6.7136 14.2572 6.70948 14.2917 6.70346 14.3259C6.7212 14.3576 6.73672 14.3899 6.75445 14.4209L6.72025 14.223ZM14.3113 6.73039C14.279 6.71234 14.2458 6.69682 14.2128 6.6794C14.1796 6.68605 14.146 6.69301 14.1128 6.69935L14.3113 6.73039Z" fill="white"/>
+              </svg></a><a href="#">
+              <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#419FD9"></rect>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0239 23.514C19.3781 23.7856 19.7652 24.087 20.2101 24.052C20.3377 24.0419 20.4497 24.0089 20.5474 23.9626C21.0345 23.7318 21.1479 23.1208 21.2531 22.5922L23.7728 9.93408C23.9596 8.9958 23.6894 7.75135 22.7915 8.0816C22.5977 8.15288 22.5831 8.16404 22.3908 8.23947L7.16849 14.2128C6.46542 14.4887 5.28473 14.6478 5.39154 15.3955C5.44223 15.7503 5.78692 15.9703 5.97259 16.0645C6.04966 16.1036 6.13148 16.1315 6.21342 16.159C8.75324 17.0103 10.7204 19.0396 11.5138 21.5981C11.6298 21.9719 11.7233 22.2707 11.7754 22.4317C11.8479 22.6711 11.9182 22.8382 11.9806 22.9549C12.0954 23.1694 12.4268 23.301 12.6334 23.1726C12.6904 23.1371 12.6857 23.1314 12.7355 23.0864L12.7766 23.0491C14.275 21.6928 16.5285 21.6009 18.1324 22.8305L19.0239 23.514ZM20.268 11.1623C20.2755 11.1575 20.2828 11.153 20.2906 11.1485C20.3204 11.1314 20.4056 11.0843 20.5002 11.0476C20.7541 10.9492 20.8141 11.3284 20.6288 11.5279C20.3638 11.7929 14.426 17.1237 13.0536 18.3534C12.9294 18.4647 12.7538 18.5604 12.7538 18.7272L12.4975 20.9173C12.4509 21.1503 12.1481 21.1736 12.0782 20.9639L10.9831 17.3759C10.9365 17.2361 10.9831 17.073 11.1229 16.9798L20.268 11.1623Z" fill="white"></path>
+              </svg></a><a href="#">
+              <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#675DA9"></rect>
+                <path d="M23.8357 8.12302C23.3064 7.63644 21.1638 6.07854 16.3876 6.0572C16.3876 6.0572 10.7578 5.71574 8.01335 8.23399C6.48532 9.76202 5.94753 11.9943 5.89204 14.7687C5.83655 17.5387 5.76399 22.7332 10.7706 24.1417H10.7749L10.7706 26.2886C10.7706 26.2886 10.7407 27.1593 11.3127 27.3343C12.0041 27.5477 12.4139 26.8861 13.0755 26.1734C13.4383 25.7807 13.9376 25.2087 14.3175 24.7691C17.7406 25.0551 20.3741 24.3978 20.6729 24.2996C21.3644 24.0734 25.2783 23.574 25.9143 18.3796C26.5716 13.0357 25.5942 9.65104 23.8357 8.12302ZM24.4161 18.004C23.8783 22.3405 20.7071 22.6137 20.1223 22.8015C19.8748 22.8826 17.5614 23.4588 14.6504 23.2667C14.6504 23.2667 12.4822 25.8831 11.8078 26.5618C11.7011 26.6685 11.5773 26.7112 11.4962 26.6898C11.381 26.6599 11.3468 26.5233 11.3511 26.3227C11.3511 26.0325 11.3682 22.7502 11.3682 22.7502C11.3639 22.7502 11.3639 22.7502 11.3682 22.7502C7.12982 21.5765 7.37738 17.1546 7.42433 14.8412C7.47128 12.5278 7.90664 10.6285 9.19991 9.35227C11.5176 7.2523 16.3022 7.56388 16.3022 7.56388C20.34 7.58095 22.2735 8.7974 22.7217 9.20288C24.2113 10.4833 24.971 13.5351 24.4161 18.004Z" fill="white"></path>
+                <path d="M18.3554 14.9223C18.2145 14.9223 18.095 14.8114 18.0865 14.6662C18.0395 13.7486 17.6084 13.3004 16.7292 13.2534C16.5798 13.2449 16.4646 13.1169 16.4731 12.9675C16.4816 12.8181 16.6097 12.7028 16.7591 12.7114C17.92 12.7754 18.5688 13.4412 18.6286 14.6364C18.6371 14.7857 18.5219 14.9138 18.3725 14.9181C18.3639 14.9223 18.3597 14.9223 18.3554 14.9223Z" fill="white"></path>
+                <path d="M19.7384 15.3834H19.7342C19.5848 15.3791 19.4653 15.2553 19.4696 15.106C19.4909 14.184 19.2263 13.4371 18.6629 12.8225C18.1037 12.2078 17.3312 11.8749 16.3111 11.8024C16.1617 11.7895 16.0507 11.6615 16.0635 11.5121C16.0763 11.3627 16.2044 11.2518 16.3537 11.2646C17.5062 11.3499 18.4153 11.7511 19.0641 12.4597C19.7171 13.1725 20.033 14.0645 20.0116 15.1188C20.0073 15.2682 19.8836 15.3834 19.7384 15.3834Z" fill="white"></path>
+                <path d="M21.155 15.9381C21.0056 15.9381 20.8861 15.8186 20.8861 15.6692C20.8733 14.0174 20.3995 12.7583 19.4349 11.815C18.4831 10.8845 17.2752 10.4108 15.8539 10.398C15.7045 10.398 15.585 10.2742 15.585 10.1248C15.585 9.97541 15.7087 9.8559 15.8539 9.8559C17.4203 9.8687 18.752 10.3937 19.8062 11.4266C20.8648 12.4595 21.4068 13.8851 21.4239 15.6607C21.4282 15.8143 21.3087 15.9381 21.155 15.9381C21.1593 15.9381 21.1593 15.9381 21.155 15.9381Z" fill="white"></path>
+                <path d="M16.7928 18.2643C16.7928 18.2643 17.1727 18.2984 17.3775 18.0466L17.7745 17.5472C17.9666 17.2996 18.4318 17.1417 18.8842 17.3935C19.136 17.5344 19.5927 17.8161 19.8745 18.0252C20.1775 18.2472 20.7921 18.7594 20.7964 18.7636C21.0909 19.0112 21.1592 19.374 20.9586 19.7624C20.9586 19.7624 20.9586 19.7667 20.9586 19.771C20.7537 20.1337 20.4763 20.4752 20.1305 20.7911C20.1263 20.7911 20.1263 20.7953 20.122 20.7953C19.836 21.0343 19.5543 21.1709 19.2812 21.2008C19.247 21.2093 19.2086 21.2093 19.1574 21.2093C19.0379 21.2093 18.9184 21.1923 18.7989 21.1539L18.7903 21.1411C18.3635 21.0215 17.655 20.7228 16.4769 20.0697C15.7087 19.6472 15.0727 19.2161 14.5306 18.785C14.2447 18.5588 13.9544 18.3069 13.6556 18.0082C13.6471 17.9996 13.6343 17.9868 13.6258 17.9783C13.6172 17.9698 13.6044 17.957 13.5959 17.9484C13.5874 17.9399 13.5745 17.9271 13.566 17.9185C13.5575 17.91 13.5447 17.8972 13.5361 17.8887C13.2416 17.5899 12.9855 17.2996 12.7593 17.0137C12.3282 16.4759 11.8971 15.8356 11.4746 15.0674C10.8215 13.8851 10.5228 13.1765 10.4033 12.754L10.3904 12.7454C10.352 12.6259 10.335 12.5064 10.335 12.3869C10.335 12.3357 10.335 12.2973 10.3435 12.2631C10.3776 11.9857 10.5142 11.7083 10.749 11.4223C10.749 11.418 10.7532 11.418 10.7532 11.4138C11.0691 11.0638 11.4106 10.7906 11.7734 10.5857C11.7734 10.5857 11.7776 10.5857 11.7819 10.5857C12.166 10.3851 12.5288 10.4534 12.7807 10.7479C12.7807 10.7479 13.2971 11.3668 13.5191 11.6699C13.7282 11.9558 14.0099 12.4083 14.1508 12.6601C14.4026 13.1125 14.2447 13.5778 13.9971 13.7698L13.4977 14.1668C13.2459 14.3716 13.28 14.7515 13.28 14.7515C13.28 14.7515 14.0184 17.56 16.7928 18.2643Z" fill="white"></path>
+              </svg></a><a href="#">
+              <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#007FFF"></rect>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9937 18.8857L14.4472 16.1698L9.47828 18.8857L14.9441 13.0832L17.5528 15.7993L22.4597 13.0832L16.9937 18.8857ZM16 6.41666C10.4772 6.41666 6 10.5621 6 15.6759C6 18.5898 7.45422 21.1888 9.72672 22.8862V26.4167L13.1316 24.5479C14.0403 24.7993 15.003 24.9351 16 24.9351C21.5228 24.9351 26 20.7896 26 15.6759C26 10.5621 21.5228 6.41666 16 6.41666Z" fill="white"></path>
+              </svg></a></div>
+          <div class="contacts-email mt-3">
+            <div class="font-subtitle1 d-inline">Эл. почта </div><a class="gray2 d-inline" href="mailto:info@skillsup.ua">info@skillsup.ua</a>
+          </div>
+        </div>
+        <div class="col-12 col-xl-4">
+          <h3 class="mb-4">Присоединяйтесь</h3>
+          <div class="contacts-social"><a href="#">
+              <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#4267B2"></rect>
+                <path d="M17.068 26.6666V16.9354H20.3343L20.8234 13.143H17.068V10.7217C17.068 9.62372 17.3729 8.8754 18.9475 8.8754L20.9558 8.87448V5.48262C20.6083 5.43657 19.4163 5.33334 18.0294 5.33334C15.134 5.33334 13.1518 7.10061 13.1518 10.3463V13.1431H9.87695V16.9355H13.1517V26.6667L17.068 26.6666Z" fill="white"></path>
+              </svg></a><a href="#">
+              <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#262626"></rect>
+                <path d="M12.6672 16C12.6672 14.1591 14.1591 12.6664 16 12.6664C17.8409 12.6664 19.3336 14.1591 19.3336 16C19.3336 17.8409 17.8409 19.3336 16 19.3336C14.1591 19.3336 12.6672 17.8409 12.6672 16ZM10.8651 16C10.8651 18.836 13.164 21.1349 16 21.1349C18.836 21.1349 21.1349 18.836 21.1349 16C21.1349 13.164 18.836 10.8651 16 10.8651C13.164 10.8651 10.8651 13.164 10.8651 16ZM20.1382 10.6615C20.1381 10.8989 20.2084 11.1309 20.3401 11.3283C20.4719 11.5257 20.6593 11.6796 20.8785 11.7705C21.0977 11.8614 21.339 11.8852 21.5718 11.839C21.8046 11.7928 22.0185 11.6786 22.1863 11.5109C22.3542 11.3431 22.4686 11.1293 22.515 10.8966C22.5614 10.6638 22.5377 10.4225 22.447 10.2032C22.3563 9.98392 22.2025 9.79644 22.0052 9.6645C21.808 9.53257 21.576 9.4621 21.3386 9.462H21.3382C21.02 9.46215 20.715 9.58856 20.49 9.81347C20.265 10.0384 20.1384 10.3434 20.1382 10.6615ZM11.96 24.1398C10.985 24.0954 10.4551 23.933 10.103 23.7958C9.63608 23.614 9.30296 23.3975 8.95272 23.0478C8.60248 22.698 8.38568 22.3652 8.20472 21.8983C8.06744 21.5463 7.90504 21.0162 7.86072 20.0413C7.81224 18.9872 7.80256 18.6706 7.80256 16.0001C7.80256 13.3296 7.81304 13.0138 7.86072 11.9589C7.90512 10.9839 8.06872 10.4549 8.20472 10.1018C8.38648 9.63496 8.60296 9.30184 8.95272 8.9516C9.30248 8.60136 9.63528 8.38456 10.103 8.2036C10.455 8.06632 10.985 7.90392 11.96 7.8596C13.0141 7.81112 13.3307 7.80144 16 7.80144C18.6693 7.80144 18.9862 7.81192 20.0412 7.8596C21.0162 7.904 21.5452 8.0676 21.8982 8.2036C22.3651 8.38456 22.6982 8.60184 23.0485 8.9516C23.3987 9.30136 23.6147 9.63496 23.7965 10.1018C23.9338 10.4538 24.0962 10.9839 24.1405 11.9589C24.189 13.0138 24.1986 13.3296 24.1986 16.0001C24.1986 18.6706 24.189 18.9863 24.1405 20.0413C24.0961 21.0162 23.9329 21.5462 23.7965 21.8983C23.6147 22.3652 23.3982 22.6983 23.0485 23.0478C22.6987 23.3972 22.3651 23.614 21.8982 23.7958C21.5462 23.933 21.0162 24.0954 20.0412 24.1398C18.9871 24.1882 18.6705 24.1979 16 24.1979C13.3295 24.1979 13.0138 24.1882 11.96 24.1398ZM11.8772 6.06056C10.8126 6.10904 10.0852 6.27784 9.44992 6.52504C8.792 6.78032 8.23504 7.1228 7.67848 7.67848C7.12192 8.23416 6.78032 8.792 6.52504 9.44992C6.27784 10.0856 6.10904 10.8126 6.06056 11.8772C6.01128 12.9434 6 13.2843 6 16C6 18.7157 6.01128 19.0566 6.06056 20.1228C6.10904 21.1874 6.27784 21.9144 6.52504 22.5501C6.78032 23.2076 7.122 23.7661 7.67848 24.3215C8.23496 24.877 8.792 25.219 9.44992 25.475C10.0864 25.7222 10.8126 25.891 11.8772 25.9394C12.944 25.9879 13.2843 26 16 26C18.7157 26 19.0566 25.9887 20.1228 25.9394C21.1874 25.891 21.9144 25.7222 22.5501 25.475C23.2076 25.219 23.765 24.8772 24.3215 24.3215C24.8781 23.7658 25.219 23.2076 25.475 22.5501C25.7222 21.9144 25.8918 21.1874 25.9394 20.1228C25.9879 19.0558 25.9992 18.7157 25.9992 16C25.9992 13.2843 25.9879 12.9434 25.9394 11.8772C25.891 10.8126 25.7222 10.0852 25.475 9.44992C25.219 8.7924 24.8772 8.23504 24.3215 7.67848C23.7658 7.12192 23.2076 6.78032 22.5509 6.52504C21.9144 6.27784 21.1874 6.10824 20.1236 6.06056C19.0574 6.01208 18.7165 6 16.0008 6C13.2851 6 12.944 6.01128 11.8772 6.06056Z" fill="white"></path>
+              </svg></a><a href="#">
+              <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#0077B5"></rect>
+                <path d="M24.8838 23.5501C23.8338 23.5251 22.8088 23.5251 21.7588 23.5501C21.5338 23.5501 21.4838 23.5001 21.4838 23.2751C21.4838 21.4251 21.4838 19.5501 21.4838 17.7001C21.4838 17.2751 21.4588 16.8501 21.3338 16.4501C20.9588 15.1501 19.4588 14.6751 18.3838 15.5501C17.8088 16.0001 17.5838 16.6251 17.5838 17.3751C17.5838 19.1251 17.5838 20.8751 17.5838 22.6251C17.5838 22.8501 17.5588 23.0751 17.5838 23.3251C17.6088 23.5251 17.5088 23.5751 17.3338 23.5501C16.2588 23.5501 15.2088 23.5501 14.1338 23.5501C13.9338 23.5501 13.8838 23.5001 13.8838 23.3001C13.9088 21.7251 13.9088 20.1501 13.9088 18.5501C13.9088 16.6001 13.9088 14.6501 13.8838 12.7251C13.8838 12.5001 13.9338 12.4501 14.1338 12.4501C15.2088 12.4501 16.2588 12.4501 17.3338 12.4501C17.5338 12.4501 17.5838 12.5001 17.5838 12.7001C17.5838 13.1001 17.5838 13.5001 17.5838 13.9751C17.6588 13.9001 17.6838 13.8751 17.7088 13.8501C18.6838 12.4251 20.0588 12.0251 21.6838 12.2751C23.5588 12.5751 24.7588 13.8751 25.0588 15.8751C25.1338 16.3501 25.1588 16.8251 25.1588 17.3001C25.1588 19.3001 25.1588 21.2751 25.1588 23.2751C25.1588 23.4751 25.1088 23.5501 24.8838 23.5501Z" fill="white"></path>
+                <path d="M11.884 18C11.884 19.75 11.884 21.5 11.884 23.25C11.884 23.475 11.834 23.55 11.609 23.55C10.559 23.525 9.50898 23.55 8.45898 23.55C8.25898 23.55 8.20898 23.5 8.20898 23.3C8.20898 19.775 8.20898 16.225 8.20898 12.7C8.20898 12.525 8.25898 12.45 8.45898 12.45C9.53398 12.45 10.609 12.45 11.684 12.45C11.909 12.45 11.934 12.525 11.934 12.725C11.884 14.475 11.884 16.225 11.884 18Z" fill="white"></path>
+                <path d="M12.0586 9.55001C11.8086 10.55 10.7836 11.125 9.60862 10.925C8.35862 10.725 7.65862 9.50001 8.10862 8.30001C8.40862 7.55001 9.13362 7.10001 10.0586 7.12501C11.4586 7.10001 12.3836 8.22501 12.0586 9.55001Z" fill="white"></path>
+              </svg></a><a href="#">
+              <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="#FF0000"></rect>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8253 9.42672C24.682 9.65736 25.3574 10.3328 25.5881 11.1895C26.0164 12.7545 25.9999 16.0165 25.9999 16.0165C25.9999 16.0165 25.9999 19.2619 25.5881 20.827C25.3574 21.6837 24.682 22.3591 23.8253 22.5898C22.2602 23.0016 16 23.0016 16 23.0016C16 23.0016 9.75616 23.0016 8.17462 22.5733C7.31795 22.3426 6.6425 21.6672 6.41186 20.8105C6 19.2619 6 16 6 16C6 16 6 12.7545 6.41186 11.1895C6.6425 10.3328 7.33443 9.64088 8.17462 9.41024C9.73969 8.99838 16 8.99838 16 8.99838C16 8.99838 22.2602 8.99838 23.8253 9.42672ZM19.2125 16L14.0066 18.9983V13.0017L19.2125 16Z" fill="white"></path>
+              </svg></a></div>
+        </div>
+        <div class="page-t2 col-12">
+          <h2>Как нас найти</h2>
+        </div>
+        <div class="col-12 col-md-6 row">
+          <div class="col-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d165.36381710256973!2d35.0442866902186!3d48.45996249078136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x95155bdc57c3fb5a!2sTrest-Ukrmontazhkhymzashchyta%20Ooo!5e0!3m2!1sru!2sua!4v1574671843706!5m2!1sru!2sua" width="100%" height="296px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+          <div class="col-6"><a class="d-block my-4" href="#">Украина, Днепр <br> ул. М. Грушевского, 9</a><a class="d-block" href="#">Мы работаем <br> 10:00 - 21:00 Пн-Пт</a></div>
+        </div>
+        <div class="col-12 col-md-6 row">
+          <div class="col-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d165.36381710256973!2d35.0442866902186!3d48.45996249078136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x95155bdc57c3fb5a!2sTrest-Ukrmontazhkhymzashchyta%20Ooo!5e0!3m2!1sru!2sua!4v1574671843706!5m2!1sru!2sua" width="100%" height="296px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+          <div class="col-6"><a class="d-block my-4" href="#">Украина, Днепр <br> ул. М. Грушевского, 9</a><a class="d-block" href="#">Мы работаем <br> 10:00 - 21:00 Пн-Пт</a></div>
+        </div>
+      </div>
+      <div class="navbuttons-wrapper">
+        <div class="navbuttons">
+          <div class="navbuttons-base navbuttons-up"><span class="iconify" data-icon="entypo:chevron-small-up" data-inline="false"></span></div>
+          <div class="navbuttons-base navbuttons-back"><span class="iconify" data-icon="entypo:chevron-small-left" data-inline="false"></span></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-fluid">
+        <hr>
+        <div class="row justify-content-between footer-info">
+          <div class="footer-nav col-auto d-lg-block"><span class="footer-title">Меню</span>
+            <div class="footer-links">
+              <div class="block"> <a href="#">Курсы </a><a href="#">Мастер-классы</a><a href="#">Календарь</a><a class="indent" href="#">Блог</a><a href="#">Вакансии</a><a href="#">Стажировки</a><a href="#">Построение карьеры</a><a href="#">Создание резюме</a><a href="#">Подготовка к собеседованию</a></div>
+              <div class="block"><a href="#">Тренинги</a><a href="#">Консалтинг</a><a class="indent" href="#">Аудит процессов</a><a href="#">Компания</a><a href="#">Наша команда</a><a href="#">Программа лояльности</a><a href="#">Встречи</a><a href="#">Найти сертификат</a></div>
+            </div>
+          </div>
+          <div class="footer-contacts col-auto"><span><span class="footer-title">Контакты</span>
+              <div class="contact-wrapper">
+                <div class="contact-block">
+                  <div class="contact"><a href="tel:+380 67 536-87-70">+380 67 536-87-70</a><a href="tel:+380 95 492-65-67">+380 95 492-65-67</a><a href="tel:+380 93 151-51-52">+380 93 151-51-52</a>
+                  </div>
+                </div>
+                <div class="contact-block"><span>Skype</span>
+                  <div class="contact"><a href="skype:itskillsup?chat">itskillsup</a></div><span>Email</span>
+                  <div class="contact"><a href="mailto:info@skillsup.ua">info@skillsup.ua</a></div>
+                </div>
+              </div></span></div>
+          <div class="footer-address col-auto d-none d-sm-block"><span class="footer-title">Как нас найти</span>
+            <div class="footer-links">
+              <div class="block"><a href="#">Украина, Днепр <br> ул. М. Грушевского, 9</a><a href="#">Мы работаем <br> 10:00 - 21:00 Пн-Пт</a><a href="#">Украина, Днепр <br> ул. М. Грушевского, 9</a><a href="#">Мы работаем <br> 10:00 - 21:00 Пн-Пт</a></div>
+              <div class="block"> <a href="#">Украина, Днепр <br> ул. М. Грушевского, 9</a><a href="#">Мы работаем <br> 10:00 - 21:00 Пн-Пт</a></div>
+            </div>
+          </div>
+        </div>
+        <hr class="d-none d-lg-block">
+        <div class="row justify-content-between footer-copyright"><span class="col-auto">© 2011-2019 SkillsUp</span>
+          <div class="social col-auto"><a href="#"><span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false"></span></a><a href="#"><span class="iconify" data-icon="fa-brands:instagram" data-inline="false"></span></a><a href="#"><span class="iconify" data-icon="fa-brands:linkedin-in" data-inline="false"></span></a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
+    <script src="./libs/ling-gallery-filter/ling-gallery-filter.js"></script>
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+    <script src="./libs/simplePagination/jquery.simplePagination.js"></script>
+    <script src="./libs/mini-event-calendar/mini-event-calendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/localization/messages_ru.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

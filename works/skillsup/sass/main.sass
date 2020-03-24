@@ -1,0 +1,231 @@
+@import 'vendors/normalize'
+@import 'colors'
+@import 'fonts'
+@import 'components/social'
+@import 'components/button'
+@import 'components/card'
+@import 'components/pagination'
+@import 'components/modal'
+@import 'components/form'
+@import 'modules/footer'
+@import 'modules/header' 
+@import 'modules/latest-news'
+@import 'modules/courses'
+@import 'modules/course-page'
+@import 'modules/info-panel'
+@import 'modules/newsletter'
+@import 'modules/start'
+@import 'modules/deal'
+@import 'modules/search'
+@import 'modules/fields'
+@import 'modules/accordion'
+@import 'modules/certificates'
+@import 'modules/bonuses'
+@import 'modules/profile'
+
+html
+    font-size: 16px
+    scroll-behavior: smooth
+
+@media screen and (max-width: 769px)
+    html
+        font-size: 12px
+
+body
+    font-family: 'Open Sans', sans-serif
+    line-height: 1.5rem
+    letter-spacing: 0.25px
+    color: $gray-color
+    padding: 0 1.5rem
+    position: relative
+    &.no-scroll
+        overflow: hidden
+        position: fixed
+        width: 100%
+
+hr
+    border-color: $gray3-color
+
+a
+    color: $gray2-color
+    transition-duration: .3s
+    font-size: 16px
+    line-height: 24px
+    &:hover
+        color: $green-color
+    &:active
+        color: $green3-color
+
+.graya
+    a
+        &:hover
+            text-decoration: none
+            color: $gray-color
+img
+    transition: .3s
+
+.active
+    color: $green-color
+
+.slick-slide
+    &:focus, & *:focus
+        outline: none
+    
+.quote
+    color: $gray2-color
+    border-left: 2px solid $green-color
+    padding-left: 2rem
+    margin: 48px 0
+
+input, textarea
+    outline-color: transparent
+    transition: .3s
+    &:focus, &:active
+        outline-color: $green-color
+
+
+.calendar-header 
+    width: 100%
+    height: 120px
+    background:  linear-gradient(to top, #2c3e50, #4ca1af) 
+    text-align:  center
+    color:  #fff
+    display: flex
+    flex-direction:  row
+    flex-wrap:  wrap
+    padding:  0
+    box-shadow:  inset 0 1px 0 rgba(255,255,255,.5), 0 1px 2px rgba(0,0,0,.9)
+    
+    h1, h2 
+        width: 100%
+        margin: 0 0 0 0
+        padding: 0
+        height:  40%
+    
+    h1  
+        line-height:  65px
+        margin-top:  18px
+        margin-bottom: 0
+        font-size: 1.2rem
+    
+    h2  
+        line-height: 10px
+        margin-top:  0 
+        text-transform:  uppercase
+        font-size: 1rem
+        font-weight:  100
+        color:  #8eefff
+        letter-spacing:  2px
+        text-shadow:  -1px -1px 0 #1a3242
+		
+	
+#headings ul 
+    list-style-type:  none
+    padding-left:  0
+    width: 100%
+    height: 20px
+    margin: 0
+    padding: 0
+    display: flex
+    box-shadow: 0 -1px 0 rgba(255,255,255,.4)
+    
+    li 
+        display:  inline-block
+        font-size:  10px
+        margin:  0 0 0 0 !important
+        padding:  0 0 0 0 !important
+        flex: 1
+        text-align:  center
+        font-weight:  bold
+        background-color:  #315671
+        height:  22px
+        line-height:  22px
+        color:  #fff
+        border-left:  1px solid rgba(255, 255, 255, 0.4)
+
+section 
+    display: flex
+    height: 380px
+    width: 100%
+    flex-wrap:  wrap
+    justify-content:  flex-start
+    background:  linear-gradient(to top, #c9ebff, #f3fdff)
+    
+    div 
+        display: inline-block
+        height:  12%
+        width:  calc(100% * 1/7)
+        text-align:  center
+        line-height:  76px
+        font-size:  18px
+        font-weight:  300 !important
+        box-shadow:  1px 1px 0 0 rgba(60, 112, 128, 0.26)
+        margin:  0
+        height:  76px
+        background-color: rgba(0, 0, 0, 0.05)
+        border-collapse: collapse
+        
+        &:first-child 
+            margin-left:  calc(12.5% * 1 + 0.4088em)
+        
+        &.today 
+            background:  linear-gradient(to top, #2c3e50, #4ca1af) 
+            color:  #FFF
+            font-weight: bold
+
+.page-title
+    @extend .font-title
+    margin: 1rem 0 4rem
+.page-btn
+    width: 45%
+    display: inline-block
+    height: auto
+    &:not(:last-child)
+        margin-right: 2rem
+    &:hover
+        text-decoration: none
+.filter-empty
+    display: none
+
+.page-t2
+    &-title-image
+        width: 100%
+        margin-bottom: 2rem
+    h2
+        margin: 6rem 0 3rem
+    h3
+        margin: 3rem 0 1rem
+    p
+        color: $gray2-color
+        @extend .font-body1
+    a
+        color: $green-color
+
+.pgray2
+    p
+        color: $gray2-color
+.gray2
+    color: $gray2-color
+
+.gray
+    color: $gray-color
+
+.green
+    color: $green-color
+.contacts-phones
+    a
+        display: block
+.contacts-social
+    a
+        svg
+            transition: .3s
+        &:not(:last-child)
+            margin-right: 1rem
+        &:hover
+            text-decoration: none
+            svg
+                transform: translateY(-4px)
+.w-40p 
+    width: 40px
+.mt-6r
+    margin-top: 6rem

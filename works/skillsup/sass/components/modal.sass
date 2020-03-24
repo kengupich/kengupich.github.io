@@ -1,0 +1,33 @@
+.modal
+    backdrop-filter: blur(50px)
+    
+    &-content
+        box-shadow: 0px 8px 24px rgba(13, 64, 89, 0.08)
+        padding: 16px 12px
+        background: rgba(255, 255, 255, 0.85)
+        border-radius: 4px
+        position: relative
+    &-header
+        flex-direction: column
+        border: none
+        .close
+            position: absolute
+            top: 0
+            right: 0
+            &:focus
+                outline: none
+    &-title-hide, &-desc-hide
+        display: none
+@media (max-width: 574px)
+    .modal
+        padding-right: 0 !important
+        background: rgba(255, 255, 255, 0.85)
+        min-height: 100vh
+        &-dialog
+            margin: 0
+        &-header
+            margin-top: 2rem
+        &-content
+            border-radius: 0px
+            border: none
+            min-height: 100vh

@@ -1,0 +1,27 @@
+extends templates/base
+
+block pageVar
+    - var pageTitle = "SkillsUp / Сертификаты";
+    - var pageName = "Сертификаты";
+
+block content
+    .certificate.row
+        .col-12.col-lg-7.offset-xl-1
+            img.w-100(src="img/certificate.jpg")
+        .col-12.col-lg-3
+            .certificate-field
+                input.certificate-input(placeholder="1234 5678")
+                a(href="#")
+                    span(class="iconify search-overlay-icon certificate-icon" data-icon="bx:bx-search-alt-2" data-inline="false")
+                .certificate-hint.font-caption.gray2.mt-2 Введите 8-значный ID номер
+            .certificate-desc
+                .button.btn-download-left Скачать
+                .button.btn-copy-left Скопировать ссылку
+                .font-body1.mt-3 Поделиться
+                .social-page.horizontal
+                    a.social-page-fb
+                        span(class="iconify" data-icon="entypo-social:facebook-with-circle" data-inline="false")
+                    a.social-page-tw
+                        span(class="iconify" data-icon="entypo-social:twitter-with-circle" data-inline="false")
+                    a.social-page-in
+                        span(class="iconify" data-icon="entypo-social:linkedin-with-circle" data-inline="false")

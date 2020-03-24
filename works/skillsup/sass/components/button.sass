@@ -1,0 +1,250 @@
+.button
+    position: relative
+    padding: 1rem 1.5rem
+    text-transform: uppercase
+    font-size: 14px
+    transition: .3s
+    border-radius: 4px
+    border: 0
+    outline: 0
+    height: 3rem
+    cursor: pointer
+    &:focus, &:active
+        outline: none
+    &-disabled
+        opacity: 0.35
+.btn-full
+    border: 1px solid $green-color
+    background: $green-color
+    color: $white-color
+    &:hover
+        background: $white-color
+        color: $green-color
+    &:focus
+        background: $green2-color
+        color: $green-color
+    &:active
+        background: $green3-color
+        border-color: $green3-color
+        color: $white2-color
+.btn-empty
+    border: 1px solid $green-color
+    background: $white-color
+    color: $green-color
+    &:hover
+        background: $green-color
+        color: $white-color
+    &:focus
+        background: $green2-color
+        color: $green-color
+    &:active
+        color: $green3-color
+        border-color: $green3-color
+.btn-clear
+    background: $white-color
+    color: $green-color
+    top: 0px
+    &:hover
+        top: -4px
+    &:focus
+        background: $green2-color
+        color: $green-color
+    &:active
+        color: $green3-color
+.btn-download-left
+    background: $white-color
+    color: $green-color
+    top: 0px
+    padding: 12px 9px
+    display: inline-block
+    &::before
+        content: url("../img/icons/download.svg")
+        width: 24px
+        height: 24px
+        margin-right: 8px
+        display: inline-block
+        vertical-align: middle
+        font-style: normal
+    &:hover
+        top: -4px
+    &:focus
+        background: $green2-color
+        color: $green-color
+    &:active
+        background: $green2-color
+        color: $green3-color
+.btn-copy-left
+    @extend .btn-download-left
+    &::before
+        content: url("../img/icons/ic-copy-link-green.svg")
+.btn-file
+    @extend .btn-download-left
+    background: transparent
+    &::before
+        content: url("../img/icons/ic_attach_file.svg")
+    input[type="file"]
+        display: none
+.btn-download-right
+    background: $white-color
+    color: $green-color
+    top: 0px
+    padding: 12px 9px
+    display: inline-block
+    &::after
+        content: url("../img/icons/download.svg")
+        width: 24px
+        height: 24px
+        margin-left: 8px
+        display: inline-block
+        vertical-align: middle
+        font-style: normal
+    &:hover
+        top: -4px
+    &:focus
+        background: $green2-color
+        color: $green-color
+    &:active
+        background: $green2-color
+        color: $green3-color
+.btn-plus
+    background: $green-color
+    color: $white-color
+    padding: 0
+    width: 3rem
+    height: 3rem
+    border-radius: 3rem
+    &::after
+        content: url("../img/icons/add_white.svg")
+        display: inline-block
+        vertical-align: middle
+        height: 18px
+        width: 18px
+    &:hover
+        background: $white-color
+        color: $green-color
+        box-shadow: 0px 8px 24px rgba(13, 64, 89, 0.04)
+        &::after
+            content: url("../img/icons/add_green.svg")
+    &:active, &:focus
+        background: $green-color
+        color: $white-color
+.btn-square
+    border-radius: 0
+    
+.navbuttons
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-direction: column
+    left: calc(100% - 32px)
+    width: 32px 
+    position: relative
+    &-wrapper
+        display: none
+        position: sticky
+        right: 0
+        bottom: 1rem
+        left: 100%
+    &-base
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 48px
+        background: $white-color
+        box-shadow: 0px 4px 12px rgba(13, 64, 89, 0.1)
+        width: 32px
+        height: 32px
+        position: relative
+        cursor: pointer
+        transition: .3s
+        &:first-child
+            margin-bottom: .8rem
+        &:hover
+            path
+                color: $green-color
+        &:active
+            background: $green-color
+            path
+                color: $white-color
+                
+        path
+            transition: .3s
+        svg
+            width: 32px
+            height: 32px
+
+@media (max-width: 768px)
+    .navbuttons-wrapper
+        display: none !important
+
+.tag
+    @extend .font-btn
+    margin: 2rem 0
+    &-active
+        color: $white2-color
+        background: $green-color
+        border-radius: 48px
+        padding: 2px 16px
+    &-item
+        &:not(:last-child)
+            margin-right: 2.5rem
+
+.ctrlbuttons
+    width: 32px
+    height: 32px
+    color: $gray-color
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    background: none
+    border: none
+    transition: .3s
+    &:hover, &:focus
+        background: $white-color
+        border: 1px solid $gray3-color
+        box-sizing: border-box
+        border-radius: 2px
+        color: $green-color
+    &:active
+        background: $green-color
+        border: 1px solid $green-color
+        box-sizing: border-box
+        border-radius: 2px
+        color: $white-color
+    &.prev
+        //opacity: .75
+
+.chip
+    margin: 2rem 0
+    &-item
+        padding: 0 16px
+        border-radius: 32px
+        border: 1px solid transparent
+        text-transform: uppercase
+        @extend .font-btn
+        &:not(:last-child)
+            margin-right: 1rem
+        &:hover
+            border-color: $green-color
+            text-decoration: none 
+        &:active, &-active
+            border-color: $green-color
+            background: $green-color
+            color: $white2-color
+            &:hover
+                color: $white2-color
+    &-blog
+        @extend .chip
+        .chip
+            &-item
+                padding: 5px 16px
+                border: 1px solid $gray3-color
+                background: $white-color
+                color: $gray-color
+                &:hover
+                    border-color: $green-color
+                &:active, &-active
+                    border-color: $green-color
+                    background: $green-color

@@ -1,0 +1,162 @@
+mixin navItem(url, name, current, child=false)
+    if current == name
+        - var liClass = "active";
+    li.nav-item(class=liClass)
+        a.nav-link(href=url)= name
+
+mixin courseCardSlide(img, date, author, text, tag)
+    a(href="course-page.html").card-wrapper
+        .card-img
+            img(src=img)
+        .card-info
+            .card-date-top=date
+            .card-author=author
+            if(tag)
+                .card-tag=tag
+            .card-text=text
+        .button.btn-empty.card-btn Записаться
+
+mixin courseCard(img, info, text, category, tag)
+    .course-card.col-12.col-sm-6.col-lg-4.col-xl-3(data-category= category) 
+        a(href="course-page.html").card-wrapper
+            .card-img
+                img(src=img)
+            .card-info
+                .card-author-overline=info
+                if(tag)
+                    .card-tag=tag
+                .card-text=text
+            .button.btn-empty.card-btn Записаться
+
+mixin courseCardSidebar(img, info, text, category, tag)
+    .course-card.col-12.col-sm-6.col-lg-4(data-category= category) 
+        a(href="course-page.html").card-wrapper
+            .card-img
+                img(src=img)
+            .card-info
+                .card-author-overline=info
+                if(tag)
+                    .card-tag=tag
+                .card-text=text
+            .button.btn-empty.card-btn Записаться
+
+mixin courseCardPage(img, info, text, category, tag)
+    .col-12.col-sm-6.col-lg-4(data-category= category)
+        a(href="course-page.html").card-wrapper
+            .card-img
+                img(src=img)
+            .card-info
+                .card-author-overline=info
+                if(tag)
+                    .card-tag=tag
+                .card-text=text
+            .button.btn-empty.card-btn Записаться
+
+mixin workshopCard(img, desc, author, text, category)
+    .workshop-card.col-12.col-sm-6.col-lg-4.col-xl-3(data-category= category)
+        a(href="course-page.html").card-wrapper
+            .card-img
+                img(src=img)
+                .card-desc=desc
+            .card-info
+                .card-author=author
+                .card-text=text
+            .button.btn-empty.card-btn Записаться
+
+mixin workshopCardSidebar(img, desc, author, text, category)
+    .workshop-card.col-12.col-sm-6.col-lg-4(data-category= category)
+        a(href="course-page.html").card-wrapper
+            .card-img
+                img(src=img)
+                .card-desc=desc
+            .card-info
+                .card-author=author
+                .card-text=text
+            .button.btn-empty.card-btn Записаться
+
+mixin workshopCardMega(img, desc, author, title, text, category)
+    a(href="course-page.html").text-decoration-none.row(data-category= category)
+        .col-12.col-lg-6
+            img(src= img)
+        .col-12.col-lg-6
+            .card-date= desc
+            .card-author-mega= author 
+            h3.card-title=title
+            .card-text-mega= text 
+            .button.btn-empty.card-btn-mega Записаться
+
+mixin blogCardMega(category, img, title, text, avatar, author, date)
+    a(href="blog-page.html").text-decoration-none.row(data-category= category)
+        .col-12.col-lg-6
+            img(src= img)
+        .col-12.col-lg-6
+            h3.mt-lg-5=title
+            .font-body1.gray2.mt-4= text 
+            .info-panel-mentor.mt-5
+                img.info-panel-mentor-img.w-40p(src=avatar)
+                .info-panel-mentor-info
+                    .font-body1= author
+                    .font-body2.gray2= date
+
+mixin blogCard(category, img, title, text, avatar, author, date)
+    a(href="blog-page.html").text-decoration-none.col-12.col-md-6.px-0.mb-4(data-category= category)
+        .col-12
+            img.w-100(src= img)
+        .col-12
+            h4.mt-3=title
+            .font-body1.gray2.mt-3= text 
+            .info-panel-mentor.mt-4
+                img.info-panel-mentor-img.w-40p(src=avatar)
+                .info-panel-mentor-info
+                    .font-body1= author
+                    .font-body2.gray2= date
+
+mixin trainerCard(category, img, name, text, addText)
+    a(href="profile.html").text-decoration-none.col-12.col-sm-6.col-lg-4.col-xl-3(data-category= category)
+        .card-wrapper
+            .card-img
+                img(src=img)
+            .card-info-trainer
+                .card-name=name
+                .card-text-trainer=text
+                if(addText)
+                    .card-text-trainer=addText
+    
+mixin dealItem(img, title, text, direction)
+    .row 
+        .col-md-6.p-0(class= direction ? "order-md-2" : "")
+            .deal-img
+                img(src=img)
+        .col-md-6.p-0.align-self-center
+            .deal-info(class= direction ? "float-md-right" : "")
+                h2.deal-title=title
+                .deal-text=text
+                button.deal-btn Узнай больше
+
+mixin collapse(idClasses, idText, linkText, linkClasses, target, text)
+    .accordion
+        div(class= idClasses ? idClasses :"")= idText
+        .accordion-info
+            button(class=linkClasses data-target="#" + target type="button" data-toggle="collapse" role="button" aria-expanded="false" aria-controls=target)= linkText
+                span(class="iconify" data-icon="entypo:chevron-down" data-inline="false")
+                span(class="iconify" data-icon="entypo:chevron-up" data-inline="false")
+            .collapse.accordion-text(id= target)= text
+            hr
+
+mixin infoPanel(...items)
+    each item in items
+        .info-panel-item
+            .info-panel-item-name= item.name
+                span(class='iconify' data-icon= item.url data-inline='false')
+            .info-panel-item-desc
+                each row in item.desc
+                    div= row
+        hr
+
+mixin infoPanelMentor(...items)
+    each item in items
+        .info-panel-mentor
+            img.info-panel-mentor-img(src=item.img)
+            .info-panel-mentor-info
+                .info-panel-mentor-name= item.name
+                .info-panel-mentor-desc= item.desc

@@ -1,0 +1,51 @@
+extends templates/page
+
+block pageVar
+    - var pageTitle = "SkillsUp / Страница";
+    - var pageName = "Страница";
+
+
+block social
+    include components/social-page
+block predcontent
+    .container-fluid.course-page-title.page-title.font-title Тестирование ПО и обеспечение качества
+block content
+    .container-fluid.course-page.p-0
+        img.course-page-img(src="img/courses/img_course.svg")
+        h3 Задача курса
+        p Это многоуровневый курс для IT специалистов и людей, занятых в сфере IT.  Он был разработан как совокупность различных тем, которые затрагивают целый спектр языковых компетенций и направлен на развитие навыков свободного языкового общения учащихся, а именно, главной целью которого является помочь научиться выражать свои мысли связно  и грамотно.
+        h3 Чему вы научитесь
+        p Курс значительно улучшит ваши коммуникативные навыки английского языка в рамках разнообразных речевых ситуаций.
+        h3 На кого рассчитан курс
+        p Среди наших студентов - учащиеся и выпускники инженерных специальностей, системные администраторы и веб-дизайнеры, менеджеры информационных систем и многих других специальностей.
+
+        p Курс разработан с учетом реальных современных требований, которые в настоящее время предъявляются к IT-специалистам при приеме на работу.
+
+        p Курс был разработан с использованием наиболее современных методических материалов именитых издательств, среди которых #[a(href="#") Oxford University Press и Pearson Longman].
+       
+        h3 Программа курса Английский для IT
+
+        .accordion-wrapper
+            +collapse("accordion-id", "1", "Первая вкладка", "accordion-link", "firstCollapse", "Очень много скрытого текста, прямо вот очень много.")
+            +collapse("accordion-id", "2", "Первая вкладка", "accordion-link", "secondCollapse", "Очень много скрытого текста, прямо вот очень много.")
+            +collapse("accordion-id", "3", "Первая вкладка", "accordion-link", "thirdCollapse", "Очень много скрытого текста, прямо вот очень много.")
+            +collapse("accordion-id", "4", "Первая вкладка", "accordion-link", "fourthCollapse", "Очень много скрытого текста, прямо вот очень много.")
+        
+        h3 Автор курса
+        a.course-page-author
+            img(src="img/trainers/photo_trainer20.png")
+            .course-page-author-name Дарья Мельник
+        .course-page-author-desc English-language teacher with around 10 years of experience. #[br] Member of IATEFL oganisation (International Association of Teachers of English as a Foreign Language).
+        
+        h3.quote Говорят, что у человека хорошо получается то, что ему нравится. А нравится мне многое. Всегда есть кто-то, кто лучше тебя в своей сфере, и у него можно и нужно этому учиться. Говорят, что у человека хорошо получается то, что ему нравится. А нравится мне многое. Всегда есть кто-то, кто лучше тебя в своей сфере, и у него можно и нужно этому учиться. Говорят, что у человека хорошо получается то, что ему нравится. А нравится мне многое. Всегда есть кто-то, кто лучше тебя в своей сфере, и у него можно и нужно этому учиться.
+
+        
+block sidebar
+    .container-fluid.p-0
+        button.modal-btn.button.btn-full.w-100.mb-4(type="button" data-toggle="modal" data-target="#exampleModalCenter") Записаться
+    include modules/info-panel
+
+    include components/modal
+
+block predfooter    
+    include modules/newsletter

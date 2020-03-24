@@ -1,0 +1,256 @@
+.mini-cal{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    padding-bottom: 1.2em;
+    background: transparent;
+    color: #455A64;
+}
+
+#calTitle{
+    display: flex;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+    font-size: 1.12em;
+    text-align: center;
+    padding: 0.4em 1em;
+    padding-top: 0.8em;
+    margin-bottom: 2rem;
+}
+
+#calTitle button{
+    outline: none;
+    display: block;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+#calTitle button svg{
+    width: 30px;
+    height: 30px;
+}
+
+#calTitle button:hover{
+    /*background: rgba(255,255,255,0.1);*/
+}
+
+#calThead, #calTbody{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.1em;
+}
+
+#calThead, .a-date .currentWeekDay{
+    margin-top: 0.4em;
+    align-items: center;
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    /* Text Body */
+
+    color: #829299;
+}
+
+#calThead b{
+    color: #455A64;
+}
+
+#calThead > div, #calTbody .a-date{
+    box-sizing: border-box;
+    flex: 1;
+    min-width: calc(100% / 7);
+    max-width: calc(100% / 7);
+    width: calc(100% / 7);
+    text-align: center;
+    padding: 0;
+}
+
+#calThead > div{
+    font-size: 1.1em;
+    padding: 0.2em 0.2em;
+}
+
+#calTbody{
+    color: #455A64;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.25px;
+}
+
+#calTbody .a-date span{
+    display: flex;
+    font-size: 16px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 0.1em solid transparent;
+    transition: .3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#calTbody .a-date{
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    background-color: transparent;
+    color: inherit;
+    padding: 12px 4px;
+    border: 0.1em solid transparent;
+    outline: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calTbody .a-date.blurred{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#calTbody .a-date.event:before{
+    content: '';
+    position: absolute;
+    bottom: 0.2em;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: #70BF04;
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 50%;
+}
+
+#calTbody .a-date.current:not(.chip-item-active) span{
+    border-color: #5A9903;
+    font-weight: bold;
+    outline: none;
+    outline: 0;
+}
+
+#calTbody .a-date.focused span,
+#calTbody .a-date:active span, #calTbody .chip-item-active span{
+    border-color: #70BF04;
+    background-color: #70BF04;
+    color: #FAFAFA;
+}
+
+#calTbody .a-date.current.event.focused > span{
+    background-color: #70BF04;
+    color: #FAFAFA;
+}
+
+#calTFooter{
+    display: none;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+    font-size: 1.1em;
+    padding: 0 1em;
+    margin-top: 0.5em;
+}
+
+#calTFooter #calLink{
+    font-size: 0.8em;
+    display: inline-block;
+    padding: 0.15rem 0.8em;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #70BF04;
+    border: 1px solid transparent;
+}
+
+#calTFooter #calLink:hover,
+#calTbody .a-date:not(.chip-item-active):hover span{
+    border-color: #70BF04;
+}
+
+#calTFooter #calLink:focus{
+    border-color: #70BF04;
+    background-color: #EFFAE1;
+}
+
+#calTFooter #calLink:active,
+#calTbody .a-date:active span{
+    border-color: #5A9903;
+    background-color: #5A9903; 
+    color: #FAFAFA;
+}
+
+#calTFooter #eventTitle{
+    margin: 0;
+    margin-right: 0.1em;
+    font-weight: normal;
+    font-size: 0.95em;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+#calTbody .a-date .currentWeekDay{
+    display: none;
+}
+
+.a-date-wrapper{
+    width: 100%;
+    padding-top: 100%;
+    position: relative; 
+}
+
+@media (max-width: 768px) {
+    /* #calTitle button{
+        display: none;
+    } */
+    #calThead, #calTbody .a-date.blurred{
+        display: none;
+    }
+    #calTbody .a-date .currentWeekDay{
+        display: block;
+    }
+    #calTitle{
+        padding-left: 0;
+    }
+    /* #monthYear{
+        text-align: left;
+    } */
+    #calThead > div, #calTbody .a-date{
+        max-width: 100%;
+    }
+    #calTbody{
+        display: block; 
+        overflow: hidden;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    #calTbody .a-date{
+        display: inline;
+
+    }
+    #calTbody .a-date.blurred{
+        float: left;
+    }
+    #calTbody .a-date > span{
+        margin: auto;
+    }
+
+
+}

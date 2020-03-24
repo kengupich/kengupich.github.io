@@ -1,0 +1,163 @@
+.card-wrapper
+    box-shadow: 0px 8px 24px rgba(13, 64, 89, 0.08)
+    border-radius: 8px
+    overflow: hidden
+    margin-bottom: 2rem
+    cursor: pointer
+    position: relative
+    display: block
+    &:hover
+        box-shadow: 0px 8px 24px rgba(13, 64, 89, 0.04)
+        text-decoration: none !important
+        .card-img
+            img
+                transform: scale(1.05)
+        & .btn-empty
+            @extend .btn-empty:hover
+    &:active
+        box-shadow: 0px 8px 8px rgba(13, 64, 89, 0.08)
+
+.card-info
+    padding: 1rem 1.5rem
+    height: 140px
+    &-trainer
+        padding: 1rem 1.5rem
+.card-date
+    margin: 2rem 0 2rem
+    color: $gray-color
+    @extend .font-body1
+.card-date-top
+    position: absolute
+    left: 1.5rem
+    top: 1rem
+    color: $white2-color
+    @extend .font-body2
+.card-author
+    color: $gray2-color
+    @extend .font-body2
+    margin-bottom: 3px
+    &-overline
+        @extend .card-author
+        @extend .font-overline
+    &-mega
+        @extend .font-body1
+        color: $gray2-color
+        margin: 1px 0 .5rem
+.card-name
+    @extend .font-subtitle1
+    color: $gray-color
+    text-align: center    
+.card-img
+    width: 100%
+    position: relative
+    overflow: hidden
+    &::after
+        content: ""
+        padding-top: 100%
+        display: block
+    img
+        position:  absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        height: 100%
+        width: 100%
+        object-fit: cover
+.card-text
+    color: $gray-color
+    @extend .font-subtitle1
+    display: inline
+    &-mega
+        color: $gray2-color
+        margin-bottom: 2rem
+        @extend .font-body1
+    &-trainer
+        color: $gray2-color
+        @extend .font-body1
+        text-align: center
+.card-tag
+    text-transform: uppercase
+    color: $white2-color
+    background: #ff5252
+    font-weight: bold
+    font-size: 10px
+    line-height: 15px
+    padding: 2px 4px
+    display: inline
+    vertical-align: 15%
+.card-desc
+    padding: .5rem 1rem
+    display: inline-block
+    color: $white2-color
+    position: absolute
+    z-index: 1
+    &::before
+        content: ""
+        background: #607D8B
+        opacity: 0.75
+        border-radius: 8px 0px
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+.card-btn
+    display: block
+    text-align: center
+    padding: .7rem 0
+    margin: 0 1.5rem 1rem
+    &:hover
+        text-decoration: none
+    &-mega
+        display: inline
+        text-align: center
+        padding: .8rem 2rem
+        margin: 0
+        &:hover
+            text-decoration: none
+
+.card-mega
+    margin-bottom: 5rem
+    img
+        width: 100%
+        border-radius: 4px
+        min-height: 350px
+        object-fit: cover
+    img.w-40p
+        width: 40px
+        min-height: 40px
+        border-radius: 50% 
+    a
+        &:hover
+            text-decoration: none
+            color: $gray-color
+
+
+.card-form
+    padding-top: 2rem
+    &-desc
+        color: $gray2-color
+        margin-bottom: 2rem
+    &-field
+        width: 100%
+    &-email
+        background: $white-color
+        opacity: 0.75
+        border: 1px solid $gray3-color
+        @extend .font-body1
+        box-sizing: border-box
+        padding: 1rem
+        margin-bottom: .5rem
+        width: 300px
+        height: calc(3rem + 2px)
+        margin-right: 1rem
+        float: left
+        &:focus, &:active
+            border-color: darken($gray3-color, 20%)
+            outline: none
+
+@media (max-width: 768px)
+    .card-info
+        width: 50vw

@@ -1,0 +1,31 @@
+.start
+    &-section
+        margin: 100px auto
+        width: 60%
+        h2
+            position: relative
+            margin-bottom: 3rem
+            text-align: center
+            &:after
+                content: ""
+                position: absolute
+                height: 2px
+                width: 12%
+                background: $green-color
+                border-radius: 2px    
+                bottom: -1.5rem
+                left: 50%
+                transform: translateX(-50%)
+        div
+           color: #829299
+
+@media (max-width: 768px)
+    .start-section
+        width: 100%
+@media (max-width: 500px)
+    .start-section
+        h2
+            text-align: left
+            &:after
+                left: 0px
+                transform: translateX(0%)

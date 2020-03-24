@@ -1,0 +1,55 @@
+extends templates/base
+
+block pageVar
+    - var pageTitle = "SkillsUp / Контакты";
+    - var pageName = "Контакты";
+
+block content
+    .font-title.mb-5 Контакты
+
+    .row
+        .col-12.col-xl-4
+            h3.mb-4 Звоните
+            .contacts-phones
+                a.font-body1.gray2(href="tel:+380 67 536-87-70") +38 (067) 536-87-70   Днепр
+                a.font-body1.gray2(href="tel:+38 (095) 492-65-67") +38 (095) 492-65-67   Днепр, Киев
+                a.font-body1.gray2(href="tel:+38 (093) 151-51-52") +38 (093) 151-51-52   Днепр, Киев
+        .col-12.col-xl-4
+            h3.mb-4 Пишите
+            .contacts-social
+                a(href="#")
+                    include components/svg/skype
+                a(href="#")
+                    include components/svg/telegram
+                a(href="#")
+                    include components/svg/viber
+                a(href="#")
+                    include components/svg/messenger
+            .contacts-email.mt-3
+                .font-subtitle1.d-inline Эл. почта 
+                a.gray2.d-inline(href="mailto:info@skillsup.ua") info@skillsup.ua
+        .col-12.col-xl-4
+            h3.mb-4 Присоединяйтесь
+            .contacts-social
+                a(href="#")
+                    include components/svg/facebook
+                a(href="#")
+                    include components/svg/instagram
+                a(href="#")
+                    include components/svg/linkedin
+                a(href="#")
+                    include components/svg/youtube
+        .page-t2.col-12
+            h2 Как нас найти
+        .col-12.col-md-6.row
+            .col-6
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d165.36381710256973!2d35.0442866902186!3d48.45996249078136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x95155bdc57c3fb5a!2sTrest-Ukrmontazhkhymzashchyta%20Ooo!5e0!3m2!1sru!2sua!4v1574671843706!5m2!1sru!2sua" width="100%" height="296px" frameborder="0" style="border:0;" allowfullscreen="")
+            .col-6
+                a.d-block.my-4(href="#") Украина, Днепр #[br] ул. М. Грушевского, 9
+                a.d-block(href="#") Мы работаем #[br] 10:00 - 21:00 Пн-Пт
+        .col-12.col-md-6.row
+            .col-6
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d165.36381710256973!2d35.0442866902186!3d48.45996249078136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x95155bdc57c3fb5a!2sTrest-Ukrmontazhkhymzashchyta%20Ooo!5e0!3m2!1sru!2sua!4v1574671843706!5m2!1sru!2sua" width="100%" height="296px" frameborder="0" style="border:0;" allowfullscreen="")
+            .col-6
+                a.d-block.my-4(href="#") Украина, Днепр #[br] ул. М. Грушевского, 9
+                a.d-block(href="#") Мы работаем #[br] 10:00 - 21:00 Пн-Пт

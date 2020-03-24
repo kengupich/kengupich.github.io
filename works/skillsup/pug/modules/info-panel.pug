@@ -1,0 +1,37 @@
+.info-panel
+    +infoPanel(
+            {name: "Старт", desc: ["23 апреля"], url: "mdi:calendar"},
+            {name: "Курс", desc: ["2 дня", "6-7 часов"], url: "ant-design:clock-circle-outline"},
+            {name: "Курс", desc: ["10 недель", "20 занятий"], url: "ant-design:clock-circle-outline"},
+            {name: "Онлайн", desc: ["Доступно"], url: "ion:school-sharp"},
+            {name: "Город", desc: ["Днепр", "Киев", "Харьков"], url: "fa-solid:map-marker-alt"},
+            {name: "Доступно", desc: ["4/10 мест"], url: "zmdi:time-interval"},
+            {name: "Стоимость", desc: ["4000 грн"], url: "el:tag"},
+            {name: "Время", desc: ["Сб. Вс."], url: "ic:baseline-group"},
+            {name: "Начало", desc: ["23 апреля", "19:00"], url: "mdi:calendar"},
+            {name: "Длительность", desc: ["2.5 часа"], url: "ant-design:clock-circle-outline"}
+        )
+    ul.add
+        li Действует программа лояльности и система скидок
+        li Предлагаем пробное занятие
+h3.mt-5.mb-4 Курс ведут
++infoPanelMentor(
+    {img: "img/trainers/photo_trainer01.jpg", name: "Марина Мельник", desc: "Business Trainer, Courses Author"},
+    {img: "img/trainers/photo_trainer02.jpg", name: "Виктория Писаренко", desc: "BA | PM | QA PSM, ISTQB CTFL"},
+    {img: "img/trainers/photo_trainer03.jpg", name: "Александр Кузьменко", desc: "BA | PM | QA"},
+    {img: "img/trainers/photo_trainer04.jpg", name: "Ева Корнеплянская", desc: "BA | QA"},
+    {img: "img/trainers/photo_trainer05.jpg", name: "Павел Сафонов", desc: "QA"}
+)
+.info-slider-wrapper
+    .info-slider
+        .slide
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d165.36381710256973!2d35.0442866902186!3d48.45996249078136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x95155bdc57c3fb5a!2sTrest-Ukrmontazhkhymzashchyta%20Ooo!5e0!3m2!1sru!2sua!4v1574671843706!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="")
+        .slide 
+            img(src="img/deal/bn_career.png")
+    .info-slider-desc-wrapper
+        .info-slider-desc
+            .slide Обучающий центр "SkillsUp"
+                .slide-desc Днепр, ул. М. Грушевского, 9
+            .slide ONLINE
+                .slide-desc YouTube
+        .info-slider-arrows

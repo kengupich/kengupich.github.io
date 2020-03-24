@@ -1,0 +1,169 @@
+.search
+    &-overlay
+        animation: searchOverlay .3s ease-in forwards
+        display: none
+        z-index: 10000
+        position: fixed
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 100vh
+        //backdrop-filter: blur(50px)
+        background: rgba(255, 255, 255, 0.85)
+        form
+            display: flex
+            flex-direction: column
+        &-input
+            animation: searchInput .5s ease-in .3s forwards
+            
+            position: relative
+            border: 0
+            border-bottom: 1px solid $gray3-color
+            padding: 11px 4px
+            width: 100%
+            caret-color: $green-color
+            color: $gray2-color
+            //text-indent: 1rem
+            opacity: 0
+            @extend .font-subtitle1
+            &:focus
+                    outline: none
+        &-field
+            position: relative
+            width: 60%
+            margin: auto
+            margin-top: 8%
+        &-icon
+            width: 1.5rem
+            height: 1.5rem
+            position: absolute
+            top: 12px
+            right: 4px
+            cursor: pointer
+        &-results
+            width: 60%
+            margin: auto
+            @extend .font-body1
+            color: $gray2-color
+            margin-top: .3rem
+            &-nofound
+                display: none
+            ul
+                list-style: none
+                padding: 0
+            a
+                color: $gray-color
+                &:hover
+                    text-decoration: none
+                    color: $gray-color
+                    color: none
+            li
+                cursor: pointer
+                padding: .5rem 4px
+                border-radius: 4px
+                box-shadow: none
+                transition: .1s
+                &:hover
+                    background: rgba(0,0,0, .05)
+                &:active
+                    box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.05)
+            .marked
+                color: $gray-color
+                font-weight: 600
+    
+    &-icon
+        width: 1.5rem
+        height: 1.5rem
+        cursor: pointer
+        transition: .3s
+        color: $gray-color
+        &:hover
+            color: $green-color
+    &-close
+        position: absolute
+        top: 2rem
+        right: 2rem
+        width: 1.5rem
+        height: 1.5rem
+        cursor: pointer
+        color: $gray-color
+        transition: .3s
+        &:hover
+            color: $green-color
+    &-page 
+        .search
+            &-overlay
+                animation: none
+                display: block
+                position: static
+                width: auto
+                height: auto
+                //backdrop-filter: blur(50px)
+                background: transparent
+                &-input
+                    color: $gray-color
+                    animation: none
+                    opacity: 1
+                h4
+                    color: $green-color
+                    @extend .font-body1
+
+                &-field
+                    width: 100%
+                    margin-bottom: 2rem
+            &-close
+                display: none
+            
+
+@keyframes searchIcon 
+    0% 
+        z-index: 10000
+        opacity: 0
+        transform: translateX(100%)
+    100% 
+        //transform: translateY(-50%)
+        position: absolute
+        right: calc(20% + 20px)
+        top: 54px
+        z-index: 10000
+        transform: translateX(0%)
+        opacity: 1
+
+@keyframes searchOverlay 
+    0% 
+        display: block
+        opacity: 0.5
+        backdrop-filter: blur(15px)
+    100% 
+        opacity: 1
+        backdrop-filter: blur(50px)
+    
+@keyframes searchInput 
+    0% 
+        display: block
+        transform: translateY(100%)
+        opacity: 0
+    100% 
+        transform: translateY(0%)
+        opacity: 1
+
+@media (max-width: 992px)
+    .search
+        &-icon, &-close
+            width: 24px
+            height: 24px
+        &-icon
+            top: 32px
+            right: 32px
+    
+@media (max-width: 574px)
+    .search
+        &-overlay
+            &-field
+                width: calc(100% - 2rem)
+                margin-top: 70px
+            &-results
+                width: calc(100% - 2rem)
+        &-icon

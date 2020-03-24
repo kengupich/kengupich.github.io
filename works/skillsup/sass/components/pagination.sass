@@ -1,0 +1,53 @@
+.pagination
+    display: flex
+    margin: 2rem auto
+    align-items: center
+    ul
+        padding: 0
+        margin: auto
+        display: flex
+        align-items: center
+    li
+        list-style: none
+        margin: 0 .5rem
+        height: 32px
+        width: 32px
+        border-radius: 32px
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 1px solid transparent 
+        &.active
+            background: $green-color
+            border-color: $green-color
+            color: $white2-color
+        .page-link:not(.prev):not(.next)
+            background: none
+            border: 1px solid transparent 
+            color: $gray-color
+            border-radius: 32px
+            width: 32px
+            height: 32px
+            padding: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            &:hover
+                border-color: $green-color
+                text-decoration: none
+                color: $gray-color
+            &:focus
+                border-color: $green-color
+                background: $green2-color
+                box-shadow: none
+            &:active
+                border-color: $green-color
+                background: $green3-color
+                color: $white2-color
+        .page-link
+            &.prev, &.next
+                border: 1px solid transparent 
+                margin: 0
+                padding: 0
+                &:hover
+                    box-shadow: none

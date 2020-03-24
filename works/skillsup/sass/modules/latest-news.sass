@@ -1,0 +1,33 @@
+.latest-news
+    &-wrapper
+        margin: 2rem -18px 4rem
+    &-item
+        padding: 10px
+        border-right: 1px solid $gray3-color 
+        border-left: 1px solid transparent
+        margin: 8px 8px 24px
+        transition: .3s
+        &:hover
+            background: $white-color
+            box-shadow: 0px 8px 24px rgba(13, 64, 89, 0.08)
+            border-radius: 4px
+            z-index: 10
+            border-color: $white-color
+            margin-left: -1px
+            padding-left: calc(1rem + 3px)
+            color: $gray-color
+            text-decoration: none
+        &:active
+            background: $white2-color
+            box-shadow: 0px 8px 8px rgba(13, 64, 89, 0.08)
+            border-radius: 4px
+            border-color: $white2-color
+            outline: none
+        &:focus
+            outline: none
+    &-date
+        @extend .font-body2
+        color: $gray2-color
+        margin-bottom: .5rem
+    &-text
+        color: $gray-color

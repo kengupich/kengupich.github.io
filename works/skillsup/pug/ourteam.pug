@@ -1,0 +1,48 @@
+extends templates/base
+
+block pageVar
+    - var pageTitle = "SkillsUp / Наша команда";
+    - var pageName = "Наша команда";
+
+block content
+    .page-title Наша команда
+    #filter-controls.chip
+        a.chip-item.chip-item-active(data-tag="all" href="#") Все
+        a.chip-item(data-tag="develop" href="#") Разработка
+        a.chip-item(data-tag="testing" href="#") Тестирование
+        a.chip-item(data-tag="management" href="#") Менеджмент
+        a.chip-item(data-tag="analitycs" href="#") Аналитика
+        a.chip-item(data-tag="design" href="#") Дизайн
+        a.chip-item(data-tag="admin" href="#") Администрация
+    
+    #myList.container-fluid.p-0
+        .row 
+            +trainerCard("develop", "img/trainers/photo_trainer01.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer02.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer03.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer04.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer05.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer06.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer07.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer08.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer09.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer10.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer11.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer12.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer13.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer14.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer15.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer16.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+            +trainerCard("develop", "img/trainers/photo_trainer17.jpg", "Сергей Журавель", "BA | PM", "PSPO, PMP")
+        .row.px-3.filter-empty
+            .card-form
+                h3 На данный момент тренеры по данной дисциплине отсутствуют
+                .card-form-desc Заходите позже или подпишитесь на нашу рассылку, чтобы быть в курсе обновлений :)
+                form(method="get" action="")
+                    .card-form-field
+                        input.card-form-email(placeholder="Введите ваш email" type="email" required data-error="#errNm1")
+                        .errorTxt
+                            span(id="errNm1")
+                        .successTxt
+                        button.button.btn-full.btn-square(type="submit" ) Подписаться
+    

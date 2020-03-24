@@ -1,0 +1,28 @@
+.field
+    &-text
+        border-bottom: 2px solid $gray3-color
+        transition: .3s
+        &::placeholder 
+            @extend .font-body1
+            color: $gray2-color
+        &:placeholder-shown 
+            & ~ label
+                @extend .font-caption
+                color: $gray2-color
+                opacity: .54
+        &:focus
+            & ~ label
+                color: $green-color
+            border-bottom: 2px solid $green-color
+        &-error
+            border-bottom: 2px solid $warning-color
+            & ~ label
+                color: $warning-color
+    &-textarea
+        border: 2px solid $gray3-color
+        border-radius: 4px
+        transition: .3s
+        &:focus
+            border-bottom: 2px solid $green-color
+        &-error
+            border-bottom: 2px solid $warning-color

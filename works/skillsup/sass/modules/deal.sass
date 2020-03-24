@@ -1,0 +1,32 @@
+.deal
+    &-section
+        margin: 1rem 0
+        .row
+            margin: 4rem 0
+    &-img > img
+        object-fit: cover
+        width: 100%
+        border-radius: 4px
+        box-shadow: 0px 12px 24px rgba(13, 64, 89, 0.15)
+    &-info
+        width: 50%
+        padding: 4rem
+    &-title
+        color: $gray-color
+        margin-bottom: 1.5rem
+    &-text
+        @extend .font-body1
+        color: $gray2-color
+        margin-bottom: 3rem
+    &-btn
+        @extend .button
+        @extend .btn-empty
+
+@media (max-width: 992px)
+    .deal-info
+        width: 100%
+        padding: 2rem 4rem
+@media (max-width: 768px)
+    .deal-info
+        width: 100%
+        padding: 4rem 1.5rem

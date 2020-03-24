@@ -1,0 +1,119 @@
+.form
+    &-field
+        width: 100%
+        margin-bottom: 2rem
+        position: relative
+        
+        input[type="radio"]:checked,
+        input[type="radio"]:not(:checked) 
+            position: absolute 
+            left: -9999px
+
+        input[type="radio"]:checked + label,
+        input[type="radio"]:not(:checked) + label
+            position: relative
+            padding-left: 28px
+            cursor: pointer
+            line-height: 20px
+            display: inline-block
+            color: $gray-color
+            margin-bottom: 2rem
+
+        input[type="radio"]:not(:checked) + label:before 
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            width: 18px
+            height: 18px
+            border-color: $green-color
+            border-radius: 100%
+            background: #fff
+            border: 1px solid $gray2-color
+        input[type="radio"]:checked + label:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            width: 18px
+            height: 18px
+            border: 1px solid $green-color
+            border-radius: 100%
+            background: #fff
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after 
+            content: ''
+            width: 8px
+            height: 8px
+            background: $green-color
+            position: absolute
+            top: 5px
+            left: 5px
+            border-radius: 100%
+            transition: all 0.2s ease
+
+        [type="radio"]:not(:checked) + label:after 
+            opacity: 0
+            transform: scale(0)
+
+        [type="radio"]:checked + label:after 
+            opacity: 1
+            transform: scale(1)
+    &-input
+        transition: all 0.3s ease
+        cursor: text
+        border: none
+        border-bottom: 1px solid $gray3-color
+        background: none
+        @extend .font-body1
+        padding: 5px 0px
+        position: relative
+        display: block
+        width: 100%
+        z-index: 2
+        + label
+            position: absolute
+            transition: all 0.3s ease
+            color: $gray2-color
+            @extend .font-body1
+            top: 5px
+            transform: translate(0%)
+            z-index: 1
+        &.error
+            border-color: $warning-color
+        &:focus, &:placeholder-shown:not(:focus), &.no-empty
+            + label
+                top: 0
+                transform: translateY(-100%)
+                @extend .font-caption
+        &:focus
+            outline: none
+            border-color: $green-color
+            + label
+                color: $green-color
+    &-close
+        width: 1.5rem
+        height: 1.5rem
+        cursor: pointer
+        color: $gray-color
+        transition: .3s
+        &:hover
+            color: $green-color
+        &:focus
+            outline: none
+            color: $green3-color
+    &-hint
+        @extend .font-caption
+        &.error
+            color: $warning-color
+    .close
+        top: 1rem
+        right: 1rem
+        padding: 0
+        margin: 0
+
+@media (max-width: 992px)
+    .form
+        &-close
+            width: 2.5rem
+            height: 2.5rem

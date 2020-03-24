@@ -1,0 +1,87 @@
+header(class=(pageName == "Главная" ? "front" : ""))
+    .header-bg
+        img(src="img/main-header-bg.png")
+    nav.navbar.navbar-expand-lg.navbar-offcanvas.flex-column
+        .row.justify-content-end.w-100
+            .header-info.d-lg-flex
+                .header-contacts.d-lg-block
+                    each val in phones
+                        a.font-body2(href="tel:" +val)= val 
+                .header-lang
+                    a.font-body2.active(href="#") UA
+                    a.font-body2(href="#") RU
+                    a.font-body2(href="#") EN
+        .row.w-100.justify-content-between.header-nav-wrapper
+            button.navbar-toggler.collapsed.p-0(type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-label="Toggle navigation" aria-expanded="false")
+                span.icon-bar.top-bar
+                span.icon-bar.middle-bar
+                span.icon-bar.bottom-bar
+            a.navbar-brand(href="index.html") 
+                    img#logo(src='img/logo_small.png')
+            .header-panel.order-lg-3
+                .header-panel-search
+                    a.header-panel-search-link
+                        span(class="iconify search-icon" data-icon="bx:bx-search-alt-2" data-inline="false")
+                    .search-overlay
+                        span(class="iconify search-close" data-icon="ion:close" data-inline="false")
+                        form(method="get")
+                            .search-overlay-field
+                                input.search-overlay-input(placeholder="Начните писать для поиска")
+                                a(href="search-page.html")
+                                    span(class="iconify search-overlay-icon" data-icon="bx:bx-search-alt-2" data-inline="false")
+                            .search-overlay-results
+                                ul
+                                    a(href="search-page.html?search=12345")
+                                        li 123 #[span.marked 45]
+                                    a(href="search-page.html?search=12345")
+                                        li 123 #[span.marked 45]
+                                    a(href="search-page.html?search=12345")
+                                        li 123 #[span.marked 45]
+                                    a(href="search-page.html?search=12345")
+                                        li 123 #[span.marked 45]
+                                .search-overlay-results-nofound
+                                    h3 Ничего не найдено
+                                    .font-body1 Попробуйте использовать другие ключевые слова
+                .header-panel-profile.d-lg-block
+                    img(src="img/icons/Profile avatar icon.png")
+            .collapse.header-nav.navbar-collapse#collapsibleNavbar.order-lg-2.col-lg-8.px-xl-5     
+                ul.navbar-nav.header-menu
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(href="#" id="learning" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Обучение
+                        .dropdown-menu.animate.slideIn(aria-labelledby="learning")
+                            a.dropdown-item(href="courses.html") Курсы
+                            a.dropdown-item(href="workshops.html") Мастер-классы
+                    li.nav-item.dropdown.active
+                        a.nav-link.dropdown-toggle(href="#" id="career" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Карьера
+                        .dropdown-menu.animate.slideIn(aria-labelledby="career")
+                            a.dropdown-item(href="jobs.html") Вакансии
+                            a.dropdown-item(href="interships.html") Стажировки
+                            a.dropdown-item(href="career.html") Построение карьеры
+                            a.dropdown-item(href="career.html") Создание резюме
+                            a.dropdown-item(href="career.html") Подготовка к собеседованию
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(href="#" id="business" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Бизнесу
+                        .dropdown-menu.animate.slideIn(aria-labelledby="business")
+                            a.dropdown-item(href="trainings.html") Тренинги
+                            a.dropdown-item(href="jobs.html") Консалтинг
+                            a.dropdown-item(href="jobs.html") Аудит процессов
+                    li.nav-item
+                        a.nav-link(href="calendar.html") Календарь
+                    li.nav-item
+                        a.nav-link(href="blog.html") Блог
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(href="#" id="about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") О нас
+                        .dropdown-menu.animate.slideIn(aria-labelledby="about")
+                            a.dropdown-item(href="jobs.html") Компания
+                            a.dropdown-item(href="ourteam.html") Наша команда
+                            a.dropdown-item(href="bonuses.html") Программа лояльности
+                            a.dropdown-item(href="workshops.html") Встречи
+                            a.dropdown-item(href="certificates.html") Найти сертификат
+                    li.nav-item
+                        a.nav-link(href="contacts.html") Контакты
+    .header-text.col-12.col-sm-6.col-lg-5.col-xl-4
+        h1.font-title Карьера в IT
+        p.font-body1 Делимся опытом полученным на реальных проектах
+    .social-wrapper
+        include ../components/social-panel
+

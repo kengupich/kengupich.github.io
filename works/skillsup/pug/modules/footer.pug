@@ -1,0 +1,92 @@
+footer
+    .container-fluid
+        hr
+        .row.justify-content-between.footer-info
+            .footer-nav.col-auto.d-lg-block
+                span.footer-title Меню
+                .footer-links
+                    .block 
+                        a(href="#") Курсы 
+                        a(href="#") Мастер-классы
+                        a(href="#") Календарь
+                        a.indent(href="#") Блог
+                        a(href="#") Вакансии
+                        a(href="#") Стажировки
+                        a(href="#") Построение карьеры
+                        a(href="#") Создание резюме
+                        a(href="#") Подготовка к собеседованию
+                    .block
+                        a(href="#") Тренинги
+                        a(href="#") Консалтинг
+                        a.indent(href="#") Аудит процессов
+                        a(href="#") Компания
+                        a(href="#") Наша команда
+                        a(href="#") Программа лояльности
+                        a(href="#") Встречи
+                        a(href="#") Найти сертификат
+                //-
+                    ul
+                        li
+                            a(href="#") Курсы 
+                        li
+                            a(href="#") Мастер-классы
+                        li
+                            a(href="#") Календарь
+                        li
+                            a.indent(href="#") Блог
+                        li
+                            a(href="#") Вакансии
+                        li
+                            a(href="#") Стажировки
+                        li
+                            a(href="#") Построение карьеры
+                        li
+                            a(href="#") Создание резюме
+                        li
+                            a(href="#") Подготовка к собеседованию
+                        li
+                            a(href="#") Тренинги
+                        li
+                            a.indent(href="#") Консалтинг
+                        li
+                            a(href="#") Аудит процессов
+                        li
+                            a(href="#") Компания
+                        li
+                            a(href="#") Наша команда
+                        li
+                            a(href="#") Программа лояльности
+                        li
+                            a(href="#") Встречи
+                        li
+                            a(href="#") Найти сертификат
+            .footer-contacts.col-auto
+                span
+                    span.footer-title Контакты
+                    .contact-wrapper
+                        .contact-block
+                            .contact
+                                each val in phones
+                                    a(href="tel:" +val)= val 
+                        .contact-block
+                            span Skype
+                            .contact
+                                a(href="skype:" +skype+"?chat")= skype 
+                            span Email
+                            .contact
+                                a(href="mailto:" +email)= email 
+            .footer-address.col-auto.d-none.d-sm-block
+                span.footer-title Как нас найти
+                .footer-links
+                    .block
+                        a(href="#") Украина, Днепр #[br] ул. М. Грушевского, 9
+                        a(href="#") Мы работаем #[br] 10:00 - 21:00 Пн-Пт
+                        a(href="#") Украина, Днепр #[br] ул. М. Грушевского, 9
+                        a(href="#") Мы работаем #[br] 10:00 - 21:00 Пн-Пт
+                    .block 
+                        a(href="#") Украина, Днепр #[br] ул. М. Грушевского, 9
+                        a(href="#") Мы работаем #[br] 10:00 - 21:00 Пн-Пт
+        hr.d-none.d-lg-block
+        .row.justify-content-between.footer-copyright
+            span.col-auto © 2011-2019 SkillsUp
+            include ../components/social-panel

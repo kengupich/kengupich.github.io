@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>SkillsUp / Сертификаты</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,600,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" type="text/css">
+    <link href="./libs/mini-event-calendar/mini-event-calendar.css" rel="stylesheet">
+    <link href="./css/main.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header-bg"><img src="img/main-header-bg.png"></div>
+      <nav class="navbar navbar-expand-lg navbar-offcanvas flex-column">
+        <div class="row justify-content-end w-100">
+          <div class="header-info d-lg-flex">
+            <div class="header-contacts d-lg-block"><a class="font-body2" href="tel:+380 67 536-87-70">+380 67 536-87-70</a><a class="font-body2" href="tel:+380 95 492-65-67">+380 95 492-65-67</a><a class="font-body2" href="tel:+380 93 151-51-52">+380 93 151-51-52</a>
+            </div>
+            <div class="header-lang"><a class="font-body2 active" href="#">UA</a><a class="font-body2" href="#">RU</a><a class="font-body2" href="#">EN</a></div>
+          </div>
+        </div>
+        <div class="row w-100 justify-content-between header-nav-wrapper">
+          <button class="navbar-toggler collapsed p-0" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-label="Toggle navigation" aria-expanded="false"><span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span><span class="icon-bar bottom-bar"></span></button><a class="navbar-brand" href="index.html"> <img id="logo" src="img/logo_small.png"></a>
+          <div class="header-panel order-lg-3">
+            <div class="header-panel-search"><a class="header-panel-search-link"><span class="iconify search-icon" data-icon="bx:bx-search-alt-2" data-inline="false"></span></a>
+              <div class="search-overlay"><span class="iconify search-close" data-icon="ion:close" data-inline="false"></span>
+                <form method="get">
+                  <div class="search-overlay-field">
+                    <input class="search-overlay-input" placeholder="Начните писать для поиска"><a href="search-page.html"><span class="iconify search-overlay-icon" data-icon="bx:bx-search-alt-2" data-inline="false"></span></a>
+                  </div>
+                  <div class="search-overlay-results">
+                    <ul><a href="search-page.html?search=12345">
+                        <li>123 <span class="marked">45</span></li></a><a href="search-page.html?search=12345">
+                        <li>123 <span class="marked">45</span></li></a><a href="search-page.html?search=12345">
+                        <li>123 <span class="marked">45</span></li></a><a href="search-page.html?search=12345">
+                        <li>123 <span class="marked">45</span></li></a></ul>
+                    <div class="search-overlay-results-nofound">
+                      <h3>Ничего не найдено</h3>
+                      <div class="font-body1">Попробуйте использовать другие ключевые слова</div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="header-panel-profile d-lg-block"><img src="img/icons/Profile avatar icon.png"></div>
+          </div>
+          <div class="collapse header-nav navbar-collapse order-lg-2 col-lg-8 px-xl-5" id="collapsibleNavbar">    
+            <ul class="navbar-nav header-menu">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="learning" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Обучение</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="learning"><a class="dropdown-item" href="courses.html">Курсы</a><a class="dropdown-item" href="workshops.html">Мастер-классы</a></div>
+              </li>
+              <li class="nav-item dropdown active"><a class="nav-link dropdown-toggle" href="#" id="career" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Карьера</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="career"><a class="dropdown-item" href="jobs.html">Вакансии</a><a class="dropdown-item" href="interships.html">Стажировки</a><a class="dropdown-item" href="career.html">Построение карьеры</a><a class="dropdown-item" href="career.html">Создание резюме</a><a class="dropdown-item" href="career.html">Подготовка к собеседованию</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="business" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Бизнесу</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="business"><a class="dropdown-item" href="trainings.html">Тренинги</a><a class="dropdown-item" href="jobs.html">Консалтинг</a><a class="dropdown-item" href="jobs.html">Аудит процессов</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="calendar.html">Календарь</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Блог</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="about" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О нас</a>
+                <div class="dropdown-menu animate slideIn" aria-labelledby="about"><a class="dropdown-item" href="jobs.html">Компания</a><a class="dropdown-item" href="ourteam.html">Наша команда</a><a class="dropdown-item" href="bonuses.html">Программа лояльности</a><a class="dropdown-item" href="workshops.html">Встречи</a><a class="dropdown-item" href="certificates.html">Найти сертификат</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="header-text col-12 col-sm-6 col-lg-5 col-xl-4">
+        <h1 class="font-title">Карьера в IT</h1>
+        <p class="font-body1">Делимся опытом полученным на реальных проектах</p>
+      </div>
+      <div class="social-wrapper">
+        <div class="social col-auto"><a href="#"><span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false"></span></a><a href="#"><span class="iconify" data-icon="fa-brands:instagram" data-inline="false"></span></a><a href="#"><span class="iconify" data-icon="fa-brands:linkedin-in" data-inline="false"></span></a></div>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <div class="certificate row">
+        <div class="col-12 col-lg-7 offset-xl-1"><img class="w-100" src="img/certificate.jpg"></div>
+        <div class="col-12 col-lg-3">
+          <div class="certificate-field">
+            <input class="certificate-input" placeholder="1234 5678"><a href="#"><span class="iconify search-overlay-icon certificate-icon" data-icon="bx:bx-search-alt-2" data-inline="false"></span></a>
+            <div class="certificate-hint font-caption gray2 mt-2">Введите 8-значный ID номер</div>
+          </div>
+          <div class="certificate-desc">
+            <div class="button btn-download-left">Скачать</div>
+            <div class="button btn-copy-left">Скопировать ссылку</div>
+            <div class="font-body1 mt-3">Поделиться</div>
+            <div class="social-page horizontal"><a class="social-page-fb"><span class="iconify" data-icon="entypo-social:facebook-with-circle" data-inline="false"></span></a><a class="social-page-tw"><span class="iconify" data-icon="entypo-social:twitter-with-circle" data-inline="false"></span></a><a class="social-page-in"><span class="iconify" data-icon="entypo-social:linkedin-with-circle" data-inline="false"></span></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="navbuttons-wrapper">
+        <div class="navbuttons">
+          <div class="navbuttons-base navbuttons-up"><span class="iconify" data-icon="entypo:chevron-small-up" data-inline="false"></span></div>
+          <div class="navbuttons-base navbuttons-back"><span class="iconify" data-icon="entypo:chevron-small-left" data-inline="false"></span></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-fluid">
+        <hr>
+        <div class="row justify-content-between footer-info">
+          <div class="footer-nav col-auto d-lg-block"><span class="footer-title">Меню</span>
+            <div class="footer-links">
+              <div class="block"> <a href="#">Курсы </a><a href="#">Мастер-классы</a><a href="#">Календарь</a><a class="indent" href="#">Блог</a><a href="#">Вакансии</a><a href="#">Стажировки</a><a href="#">Построение карьеры</a><a href="#">Создание резюме</a><a href="#">Подготовка к собеседованию</a></div>
+              <div class="block"><a href="#">Тренинги</a><a href="#">Консалтинг</a><a class="indent" href="#">Аудит процессов</a><a href="#">Компания</a><a href="#">Наша команда</a><a href="#">Программа лояльности</a><a href="#">Встречи</a><a href="#">Найти сертификат</a></div>
+            </div>
+          </div>
+          <div class="footer-contacts col-auto"><span><span class="footer-title">Контакты</span>
+              <div class="contact-wrapper">
+                <div class="contact-block">
+                  <div class="contact"><a href="tel:+380 67 536-87-70">+380 67 536-87-70</a><a href="tel:+380 95 492-65-67">+380 95 492-65-67</a><a href="tel:+380 93 151-51-52">+380 93 151-51-52</a>
+                  </div>
+                </div>
+                <div class="contact-block"><span>Skype</span>
+                  <div class="contact"><a href="skype:itskillsup?chat">itskillsup</a></div><span>Email</span>
+                  <div class="contact"><a href="mailto:info@skillsup.ua">info@skillsup.ua</a></div>
+                </div>
+              </div></span></div>
+          <div class="footer-address col-auto d-none d-sm-block"><span class="footer-title">Как нас найти</span>
+            <div class="footer-links">
+              <div class="block"><a href="#">Украина, Днепр <br> ул. М. Грушевского, 9</a><a href="#">Мы работаем <br> 10:00 - 21:00 Пн-Пт</a><a href="#">Украина, Днепр <br> ул. М. Грушевского, 9</a><a href="#">Мы работаем <br> 10:00 - 21:00 Пн-Пт</a></div>
+              <div class="block"> <a href="#">Украина, Днепр <br> ул. М. Грушевского, 9</a><a href="#">Мы работаем <br> 10:00 - 21:00 Пн-Пт</a></div>
+            </div>
+          </div>
+        </div>
+        <hr class="d-none d-lg-block">
+        <div class="row justify-content-between footer-copyright"><span class="col-auto">© 2011-2019 SkillsUp</span>
+          <div class="social col-auto"><a href="#"><span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false"></span></a><a href="#"><span class="iconify" data-icon="fa-brands:instagram" data-inline="false"></span></a><a href="#"><span class="iconify" data-icon="fa-brands:linkedin-in" data-inline="false"></span></a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
+    <script src="./libs/ling-gallery-filter/ling-gallery-filter.js"></script>
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+    <script src="./libs/simplePagination/jquery.simplePagination.js"></script>
+    <script src="./libs/mini-event-calendar/mini-event-calendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/localization/messages_ru.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

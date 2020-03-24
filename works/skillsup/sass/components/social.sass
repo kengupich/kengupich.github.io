@@ -1,0 +1,70 @@
+.social
+    display: flex
+    align-items: center
+    margin: 0 -12px
+    .iconify
+        transition: .3s
+        cursor: pointer
+    a
+        padding: 0 12px
+        &:hover
+            transform: translateY(-4px)
+            .iconify
+                box-shadow: 0px 8px 24px rgba(13, 64, 89, 0.08)
+            svg[data-icon="fa-brands:facebook-f"]
+                color: #4267B2
+            svg[data-icon="fa-brands:instagram"]
+                color: #262626
+            svg[data-icon="fa-brands:linkedin-in"]
+                color: #0077B5
+        &:active
+            .iconify
+                color: $green-color !important
+                box-shadow: 0px 8px 8px rgba(13, 64, 89, 0.08)
+
+    &-page
+        position: sticky
+        top: 90px
+        left: 0
+        bottom: 0
+        padding-top: 2rem
+        .iconify
+            width: 36px
+            height: 36px
+            position: relative
+            border-radius: 18px
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+        &-fb
+            path
+                fill: #4267B2
+        &-tw
+            path
+                fill: #1DA1F2
+        &-in
+            path
+                fill: #0077B5
+        a
+            margin-bottom: 1rem
+            display: block
+            
+            svg
+                box-shadow: none
+                transition: .3s
+        a:hover
+            svg
+                box-shadow: 0px 0px 15px rgba(13, 64, 89, 0.3)
+        a:active
+            svg
+                box-shadow: 0px 0px 25px rgba(13, 64, 89, 0.3)
+        &.horizontal
+            position: relative
+            top: 0
+            padding-top: 1.5rem
+            a
+                display: inline-block
+                &:not(:last-child)
+                    margin-right: 1rem
+                

@@ -1,0 +1,37 @@
+extends templates/page-solo
+
+block pageVar
+    - var pageTitle = "SkillsUp / Результаты поиска";
+    - var pageName = "Результаты поиска";
+
+block content
+    .search-page
+        .search-overlay
+            span(class="iconify search-close" data-icon="ion:close" data-inline="false")
+            form(method="get")
+                .search-overlay-field
+                    input.search-overlay-input#input-placeholder
+                    a(href="index.html")
+                        span(class="iconify search-overlay-icon" data-icon="ion:close" data-inline="false")
+                    .search-results-count.font-caption.gray2.mt-2
+                .search-results-item.font-body1
+                    a.green(href="#") Agile Business Analyst
+                .font-body2.gray2.mb-5 Программа тренинга: Требования в Agile Работа с клиентом и командой в Agile проектах Написание 
+                .search-results-item.font-body1
+                    a.green(href="#") Agile Business Analyst
+                .font-body2.gray2.mb-5 Программа тренинга: Требования в Agile Работа с клиентом и командой в Agile проектах Написание 
+                .search-results-item.font-body1
+                    a.green(href="#") Agile Business Analyst
+                .font-body2.gray2.mb-5 Программа тренинга: Требования в Agile Работа с клиентом и командой в Agile проектах Написание 
+                .search-results-item.font-body1
+                    a.green(href="#") Agile Business Analyst
+                .font-body2.gray2.mb-5 Программа тренинга: Требования в Agile Работа с клиентом и командой в Agile проектах Написание 
+                .search-results-item.font-body1
+                    a.green(href="#") Agile Business Analyst
+                .font-body2.gray2.mb-5 Программа тренинга: Требования в Agile Работа с клиентом и командой в Agile проектах Написание 
+                .search-results-item.font-body1
+                    a.green(href="#") Agile Business Analyst
+                .font-body2.gray2.mb-5 Программа тренинга: Требования в Agile Работа с клиентом и командой в Agile проектах Написание 
+                
+                .pagination
+                
