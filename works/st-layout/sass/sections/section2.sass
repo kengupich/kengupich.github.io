@@ -1,0 +1,106 @@
+.section2
+    padding-bottom: 19rem
+    .extension-slider
+        position: relative
+        top: -25rem
+        .slide
+            max-width: 1717px
+            margin: 0 auto 
+            padding-bottom: 10rem
+            display: flex
+            justify-content: space-between
+            .smile
+                margin-top: 10rem
+            .extension
+                border: none
+                border-radius: 22px
+                box-shadow: 0px 7rem 17rem rgba(0, 0, 0, 0.36)
+    .row:nth-child(2)
+        display: flex
+        justify-content: space-around
+        padding: 0 12.7rem 0
+        margin-top: -32rem
+        margin-bottom: 13.4rem
+    .row:last-child
+        padding: 0 31rem
+        .slick-slide
+            height: 7rem
+            padding: .5rem 9rem
+            box-sizing: border-box
+            filter: brightness(0) invert(1)
+    .col
+        h2
+            color: $white-color
+            font-size: 5.5rem
+            font-weight: bold
+            line-height: 11rem
+            span
+                font-size: 7.5rem
+                background: $linear-gradient
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                min-width: 55rem
+                display: inline-block
+        a
+            color: $cherry-color
+            font-size: 4.5rem
+            line-height: 5.4rem
+            font-weight: bold
+            margin-top: 12.3rem
+            display: block
+            &:after
+                content: ''
+                display: inline-block
+                margin: 0 0 .55rem 2.9rem
+                height: 1.955rem
+                width: 4.4rem
+                background-image: url('../img/icons/arrow-download.svg')
+                background-size: cover
+        ul
+            color: $white-color
+            margin-top: 6rem
+            //list-style-image: url('../img/icons/ellipse.svg')
+            li
+                list-style: none
+                font-size: 3rem
+                line-height: 4.5rem
+                margin-bottom: 4rem
+                background: url('../img/icons/ellipse.svg') no-repeat
+                background-position: 0 1.1rem
+                padding-left: 4.5rem
+@media(max-width: 1980px)
+    .section2
+        .extension-slider
+            .slide
+                padding-left: 30rem
+                padding-right: 30rem
+                .extension
+                    transform: scale(0.8)
+        .row:nth-child(2), .row:last-child
+            padding: 0 21rem
+@media(max-width: 1680px)
+    .section2
+        .extension-slider
+            .slide
+                padding-left: 20rem
+                padding-right: 20rem
+@media(max-width: 1440px)
+    .section2
+        .extension-slider
+            .slide
+                padding-left: 10rem
+                padding-right: 10rem
+                .smile
+                    width: 12rem
+        .row:nth-child(2), .row:last-child
+            padding: 0 10rem
+@media(max-width: 1280px)
+    .section2
+        .extension-slider
+            .slide
+                padding-left: 5rem
+                padding-right: 5rem
+                .extension
+                    transform: scale(0.7)
+        .row:nth-child(2), .row:last-child
+            padding: 0 7rem

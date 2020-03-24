@@ -1,0 +1,79 @@
+
+.slide-skip 
+    position: absolute
+    left: 50%
+    bottom: 0
+.chevron 
+    position: absolute
+    left: -14px
+    top: -15px
+    width: 28px
+    height: 8px
+    opacity: 0
+    transform: scale3d(0.5, 0.5, 0.5)
+    animation: move 3s ease-out infinite
+    &:first-child 
+        animation: move 3s ease-out 1s infinite
+    &:nth-child(2) 
+        animation: move 3s ease-out 2s infinite
+    &:before,
+    &:after 
+        content: ' '
+        position: absolute
+        top: 0
+        height: 100%
+        width: 51%
+        background: $cherry-color
+    &:before 
+        left: 0
+        transform: skew(0deg, 30deg)
+    &:after 
+        right: 0
+        width: 50%
+        transform: skew(0deg, -30deg)
+
+.text 
+    display: block
+    position: relative
+    left: -6rem
+    bottom: 3px
+    margin-top: 7.5rem
+    font-size: 1.2rem
+    color: $dark-color
+    text-transform: uppercase
+    white-space: nowrap
+    opacity: .25
+    animation: pulse 2s linear alternate infinite
+
+.area 
+    position: absolute
+    height: 10rem
+    width: 12rem
+    left: -6rem
+    top: 0
+    cursor: pointer
+
+.bg-primary
+    .text 
+        color: $white-color
+
+@keyframes move 
+    25% 
+        opacity: 1
+
+    33% 
+        opacity: 1
+        transform: translateY(30px)
+
+    67% 
+        opacity: 1
+        transform: translateY(40px)
+
+    100% 
+        opacity: 0
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5)
+
+@keyframes pulse 
+    to 
+        opacity: 1
+
