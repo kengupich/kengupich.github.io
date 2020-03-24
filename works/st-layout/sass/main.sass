@@ -1,0 +1,69 @@
+@import url('https://rsms.me/inter/inter.css')
+@import 'vendors/normalize'
+@import 'colors'
+@import 'animation'
+@import 'components/button'
+@import 'components/checked'
+@import 'components/search'
+@import 'components/advantage'
+@import 'components/section-controllers'
+@import 'components/slide-skip'
+@import 'components/preloader'
+@import 'components/up-btn'
+@import 'components/modal'
+
+@import 'sections/section1'
+@import 'sections/section2'
+@import 'sections/section3'
+@import 'sections/section4'
+@import 'sections/section5'
+
+html
+    font-size: 10px
+    font-family: 'Inter', sans-serif
+
+body
+    overflow: hidden
+
+a, button
+    text-decoration: none
+    transition: .3s
+
+*:focus
+    outline: none
+
+.bg-primary
+    background: $linear-gradient2
+
+.full-section
+    height: 100vh
+    box-sizing: border-box
+    padding: 12.5rem 21rem 10rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: stretch
+
+.screen
+    max-width: 100%
+    max-height: 100%
+
+.hidden
+    opacity: 0
+.visible
+    opacity: 1
+
+@media(max-width: 1680px)
+    html
+        font-size: 8.5px
+@media(max-width: 1440px)
+    html
+        font-size: 7.3px
+    .full-section
+        padding: 8.5rem 10rem 7rem
+@media(max-width: 1280px)
+    html
+        font-size: 6px
+    .full-section
+        padding: 4.5rem 7rem 4rem
+        

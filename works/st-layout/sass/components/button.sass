@@ -1,0 +1,89 @@
+$box-shadow: 0px 10px 50px rgba($orange-color, 0.5)
+.button
+    display: inline-block
+    border-radius: 1.5rem
+    font-weight: bold
+    font-size: 2.5rem
+    line-height: 3rem
+    &-primary
+        padding: 2.4rem 4.4rem
+        background: $linear-gradient
+        color: $white-color
+        &:hover
+            background: $linear-gradient
+            box-shadow: $box-shadow
+        &.active
+            background-color: $red-color
+            background: $red-color
+            &:hover
+                background: $linear-gradient
+    &-watch
+        padding: 2.4rem 4.4rem 2.4rem 8.5rem
+        color: $cherry-color
+        position: relative
+        border: 1px solid $cherry-color
+        &:before //for icon play
+            content: ''
+            display: inline-block
+            background-size: auto 100%
+            position: absolute
+            background-image: url('../img/icons/play.svg')
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            height: 50%
+            width: 3.6rem
+            top: 25%
+            left: 5%
+            margin-right: .5rem
+        &:hover
+            background: $linear-gradient
+            box-shadow: $box-shadow
+            color: $white-color
+            border-color: transparent
+            &:before
+                background-image: url('../img/icons/play-white.svg')
+        &.active
+            background-color: $red-color
+            background: $red-color
+            color: $white-color
+            &:before
+                background-image: url('../img/icons/play-white.svg')
+            &:hover
+                background: $linear-gradient
+    &-white
+        padding: 1.5rem 4rem 1.5rem 4rem
+        border-radius: 10px
+        font-weight: 600
+        color: $cherry-color
+        background-color: $white-color
+        &:hover
+            border: 2px solid $white-color
+            background-color: transparent!important
+            color: $white-color
+            margin: -2px 0 0 -2px
+            padding: 1.3rem 4rem 1.3rem 4rem
+        &.active
+            color: $white-color
+            background-color: transparentize($white-color, .5)
+        &-outline
+            padding: 1.3rem 4rem 1.3rem 4rem
+            border-radius: 10px
+            font-weight: 600
+            color: $white-color
+            border: 2px solid $white-color
+            &:hover
+                color: $cherry-color!important
+                background-color: $white-color!important
+            &.active
+                color: $white-color
+                background-color: transparentize($white-color, .5)
+                border: 2px solid transparent
+
+@media(max-width: 1980px)
+    .button
+        font-size: 1.8rem
+        line-height: 2.2rem
+        &-primary
+            padding: 1.2rem 3.5rem
+        &-watch
+            padding: 1.2rem 3.5rem 1.2rem 6.1rem
